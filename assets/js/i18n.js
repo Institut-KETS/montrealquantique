@@ -8,7 +8,7 @@
     'Members': 'Membres',
     'Courses': 'Cours',
     'Speaker series': 'Série de conférences',
-    'Speakers & visitors': 'Conférences et visites',
+    'Speakers & Visitors': 'Conférences et visites',
     'Speakers and visitors': 'Conférences et visites',
     'News': 'Actualités',
     'Menu': 'Menu',
