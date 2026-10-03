@@ -407,16 +407,12 @@ th { font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; }
 .prose { max-width: 48rem; margin-inline: auto; padding-block: 4rem 6rem; }
 
 /* Ink footer */
-.site-footer { position: relative; isolation: isolate; overflow: hidden; background: #0d1213; color: #c9d0cd; border-top: 0; }
+.site-footer { position: relative; isolation: isolate; overflow: hidden; background: #07111f; color: #c9d0cd; border-top: 0; }
 .site-footer::before { content: ""; position: absolute; z-index: 2; inset: 0 0 auto; height: 1px; background: linear-gradient(90deg,var(--spice) 0 33%,var(--atlas-blue) 33% 66%,var(--atlas-green) 66%); opacity: .9; }
 .site-footer::after { content: ""; position: absolute; z-index: 0; inset: 0; pointer-events: none; background:
-  radial-gradient(ellipse 28% 110% at 0% 112%, rgb(47 97 137 / .28), transparent 75%),
-  radial-gradient(ellipse 26% 95% at 100% -8%, rgb(113 54 86 / .22), transparent 75%),
-  radial-gradient(ellipse 22% 70% at 78% 115%, rgb(39 108 91 / .18), transparent 78%); }
+  linear-gradient(180deg,rgb(7 17 31 / .08) 0 36%,rgb(7 17 31 / .34) 100%),
+  url("../images/footer-ink-spice.webp") center bottom / cover no-repeat; opacity: .58; }
 .footer-inner { position: relative; z-index: 1; width: var(--page); margin: auto; display: grid; grid-template-columns: 1.2fr .7fr .8fr; gap: 4rem; padding-block: 4.5rem; }
-.footer-inner::before, .footer-inner::after { content: ""; position: absolute; z-index: 0; pointer-events: none; border-radius: 50%; transform: rotate(-3deg); }
-.footer-inner::before { width: 92rem; height: 27rem; left: -38rem; bottom: -24rem; border: 1px solid rgb(183 220 224 / .22); box-shadow: 0 -1.2rem 4.5rem rgb(43 112 109 / .12), inset 0 .7rem 3rem rgb(58 111 153 / .08); }
-.footer-inner::after { width: 76rem; height: 24rem; right: -42rem; bottom: -20rem; border: 1px solid rgb(235 188 211 / .2); box-shadow: 0 -1rem 4rem rgb(139 67 106 / .1), inset 0 .8rem 3.5rem rgb(107 86 153 / .08); transform: rotate(4deg); }
 .footer-inner > * { position: relative; z-index: 1; }
 .site-footer h2 { color: #f5f7f6; margin: 0 0 .9rem; font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; }
 .footer-identity strong { color: #fff; font-family: var(--serif); font-size: 2rem; letter-spacing: -.035em; font-weight: 560; }
