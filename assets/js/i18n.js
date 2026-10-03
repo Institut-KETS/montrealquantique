@@ -34,6 +34,7 @@
     'Visit IBM Quantum': 'Visiter IBM Quantum',
     'Map contents': 'Contenu de la carte',
     '7 university locations': '7 sites universitaires',
+    '7 university locations · IBM Quantum': '7 sites universitaires · IBM Quantum',
     'Our network for quantum software research.': 'Notre réseau de recherche en logiciel quantique.',
     'Meet the community': 'Découvrir la communauté',
     'Montréal Quantique programme areas': 'Axes du programme Montréal Quantique',

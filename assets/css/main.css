@@ -131,7 +131,6 @@ body.preview-locked #preview-site { visibility: hidden; }
 .map-marker-ibm { --marker: #0f62fe; --label-left: 1rem; --label-top: .35rem; left: 63.4%; top: 59.7%; }
 .hero-map-footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .85rem 1.25rem 1rem; }
 .hero-map-footer p { display: flex; flex-wrap: wrap; gap: .8rem; margin: 0; color: var(--muted); font-size: .68rem; }
-.map-key { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 999px; padding: .18rem .42rem; background: var(--paper); }
 .hero-map-footer a { flex: 0 0 auto; color: var(--ink); font-size: .78rem; font-weight: 780; text-underline-offset: .18em; }
 
 .community-feature { padding-block: 0 clamp(5.5rem,9vw,8.5rem); }
