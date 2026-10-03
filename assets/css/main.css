@@ -350,6 +350,17 @@ body.preview-locked #preview-site { visibility: hidden; }
 .programme-stats article:last-child { border-right: 0; }
 .programme-stats strong { display: block; font: 560 2.8rem/1 var(--serif); }
 .programme-stats span { color: var(--muted); font-size: .76rem; }
+.intriq-partnership { border-bottom: 1px solid var(--line); background: #fff; padding-block: 3.5rem; }
+.intriq-partnership-card { position: relative; isolation: isolate; overflow: hidden; display: grid; grid-template-columns: minmax(14rem,.52fr) minmax(0,1.48fr); align-items: stretch; border-radius: var(--radius); background: #07111f; color: #eef3f6; box-shadow: 0 1.2rem 3.4rem rgb(12 25 43 / .14); }
+.intriq-partnership-card::before { content: ""; position: absolute; z-index: -1; inset: 0; background: radial-gradient(circle 16rem at 100% 0%,rgb(220 36 188 / .5),transparent 66%),radial-gradient(circle 19rem at 83% 112%,rgb(0 139 255 / .62),transparent 70%),linear-gradient(100deg,transparent 0 56%,rgb(76 44 164 / .2)); }
+.intriq-partnership-card::after { content: ""; position: absolute; z-index: -1; inset: auto 0 0; height: 2px; background: linear-gradient(90deg,var(--atlas-blue),#3f9cff 42%,#d92ab5 78%,var(--spice)); }
+.intriq-partnership-mark { display: grid; place-items: center; min-height: 13rem; border-right: 1px solid rgb(255 255 255 / .18); padding: 2.5rem; }
+.intriq-partnership-mark img { width: min(100%,17rem); height: auto; }
+.intriq-partnership-copy { max-width: 48rem; padding: clamp(2rem,5vw,3.5rem); }
+.intriq-partnership-copy .eyebrow { color: #b8d8ff; }
+.intriq-partnership-copy h2 { margin: .35rem 0 .8rem; color: #fff; font: 560 clamp(2rem,4vw,3.05rem)/1 var(--serif); letter-spacing: -.04em; }
+.intriq-partnership-copy p:not(.eyebrow) { margin: 0 0 1.2rem; color: #d6dce1; }
+.intriq-partnership-copy a { color: #fff; font-size: .86rem; font-weight: 760; }
 .event-section, .visitor-section { padding-block: 4.5rem; }
 .event-list { border-top: 1px solid var(--ink); margin-bottom: 2rem; }
 .event-row { display: grid; grid-template-columns: 13rem 1fr; gap: 2rem; border-bottom: 1px solid var(--line); padding-block: 1.5rem; }
@@ -434,7 +445,7 @@ th { font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; }
   .primary-nav a[aria-current="page"]::after { display: none; }
   .hero-grid { min-height: auto; grid-template-columns: 1fr; gap: 3.5rem; padding-block: 5.2rem; }
   .hero-map { max-width: 42rem; }
-  .cloud-grid, .theme-grid, .program-grid, .scaffold-grid, .prose-grid, .profile-grid, .footer-inner, .rotation-grid, .record-grid, .governance-overview, .committee-grid, .contact-grid { grid-template-columns: 1fr; }
+  .cloud-grid, .theme-grid, .program-grid, .scaffold-grid, .prose-grid, .profile-grid, .footer-inner, .rotation-grid, .record-grid, .governance-overview, .committee-grid, .contact-grid, .intriq-partnership-card { grid-template-columns: 1fr; }
   .theme-card { min-height: 15rem; }
   .theme-card h3 { margin-top: 2.4rem; }
   .program-grid article, .program-grid article:not(:first-child) { padding: 2.5rem 0; border-right: 0; border-bottom: 1px solid var(--line); }
@@ -447,6 +458,7 @@ th { font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; }
   .filter-panel[open] .filter-summary-show { display: none; }
   .filter-panel[open] .filter-summary-hide { display: inline; }
   .profile-grid { gap: 1rem; }
+  .intriq-partnership-mark { min-height: 9rem; border-right: 0; border-bottom: 1px solid rgb(255 255 255 / .18); }
   .profile-header { grid-template-columns: 1fr; gap: 1.5rem; padding-block: 3rem; }
   .footer-inner { gap: 2rem; }
   .contact-grid article, .contact-grid article + article { padding: 2.7rem 0; border-left: 0; border-bottom: 1px solid var(--line); }
@@ -518,6 +530,9 @@ th { font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; }
   body { color: #000; background: #fff; }
   .site-header,.site-footer { position: static; background: #fff; color: #000; border-color: #aaa; }
   .site-footer a,.site-footer h2,.footer-identity strong { color: #000; }
+  .intriq-partnership-card { background: #fff; color: #000; box-shadow: none; border: 1px solid #aaa; }
+  .intriq-partnership-mark img { filter: invert(1); }
+  .intriq-partnership-copy h2,.intriq-partnership-copy p:not(.eyebrow),.intriq-partnership-copy a { color: #000; }
   .hero,.page-header,.program-band { background: #fff; }
   .member-card,.course-card,.committee-card { break-inside: avoid; box-shadow: none; }
 }
