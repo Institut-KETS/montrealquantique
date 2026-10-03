@@ -7,7 +7,7 @@ const values = (value = '') => value.split(',').filter(Boolean);
 export function matchesMember(member, state) {
   const search = normalizeText(member.searchText || `${member.name || ''} ${member.summary || ''}`);
   if (state.q && !search.includes(normalizeText(state.q))) return false;
-  const checks = [['roles', [member.role]], ['institutions', member.institutions || []], ['topics', member.topics || []], ['supervisors', member.supervisors || []]];
+  const checks = [['roles', [member.role]], ['institutions', member.institutions || []], ['families', member.families || []], ['topics', member.topics || []], ['supervisors', member.supervisors || []]];
   return checks.every(([facet, memberValues]) => {
     const selected = state[facet] || [];
     return selected.length === 0 || selected.some((value) => memberValues.includes(value));
@@ -15,32 +15,40 @@ export function matchesMember(member, state) {
 }
 
 export function stateFromParams(params) {
-  return { q: params.get('q') || '', roles: params.getAll('role'), institutions: params.getAll('institution'), topics: params.getAll('topic'), supervisors: params.getAll('supervisor') };
+  return { q: params.get('q') || '', roles: params.getAll('role'), institutions: params.getAll('institution'), families: params.getAll('family'), topics: params.getAll('topic'), supervisors: params.getAll('supervisor') };
 }
 
 export function paramsFromState(state) {
   const params = new URLSearchParams();
   if (state.q) params.set('q', state.q);
-  [['role', state.roles], ['institution', state.institutions], ['topic', state.topics], ['supervisor', state.supervisors]].forEach(([key, selected]) => [...selected].sort().forEach((value) => params.append(key, value)));
+  [['role', state.roles], ['institution', state.institutions], ['family', state.families], ['topic', state.topics], ['supervisor', state.supervisors]].forEach(([key, selected]) => [...(selected || [])].sort().forEach((value) => params.append(key, value)));
   return params;
 }
 
 const cards = typeof document === 'undefined' ? [] : [...document.querySelectorAll('[data-member-card]')];
 const query = typeof document === 'undefined' ? null : document.querySelector('[data-filter-query]');
 const controls = typeof document === 'undefined' ? [] : [...document.querySelectorAll('[data-filter]')];
+const filterPanel = typeof document === 'undefined' ? null : document.querySelector('.filter-panel');
+
+if (filterPanel) {
+  const mobileDirectory = window.matchMedia('(max-width: 900px)');
+  const syncFilterPanel = ({ matches }) => { filterPanel.open = !matches; };
+  syncFilterPanel(mobileDirectory);
+  mobileDirectory.addEventListener('change', syncFilterPanel);
+}
 
 function cardData(card) {
-  return { searchText: card.textContent, role: card.dataset.role, institutions: values(card.dataset.institutions), topics: values(card.dataset.topics), supervisors: values(card.dataset.supervisors) };
+  return { searchText: card.textContent, role: card.dataset.role, institutions: values(card.dataset.institutions), families: values(card.dataset.families), topics: values(card.dataset.topics), supervisors: values(card.dataset.supervisors) };
 }
 
 function stateFromControls() {
   const selected = (name) => controls.filter((input) => input.dataset.filter === name && input.checked).map((input) => input.value);
-  return { q: query?.value.trim() || '', roles: selected('role'), institutions: selected('institution'), topics: selected('topic'), supervisors: selected('supervisor') };
+  return { q: query?.value.trim() || '', roles: selected('role'), institutions: selected('institution'), families: selected('family'), topics: selected('topic'), supervisors: selected('supervisor') };
 }
 
 function setControls(state) {
   if (query) query.value = state.q;
-  const map = { role: state.roles, institution: state.institutions, topic: state.topics, supervisor: state.supervisors };
+  const map = { role: state.roles, institution: state.institutions, family: state.families, topic: state.topics, supervisor: state.supervisors };
   controls.forEach((input) => { input.checked = map[input.dataset.filter].includes(input.value); });
 }
 
@@ -55,7 +63,7 @@ function renderChips(state) {
   container.replaceChildren();
   const entries = [];
   if (state.q) entries.push(['q', state.q, `Search: ${state.q}`]);
-  [['role', state.roles], ['institution', state.institutions], ['topic', state.topics], ['supervisor', state.supervisors]].forEach(([facet, list]) => list.forEach((value) => entries.push([facet, value, controlLabel(facet, value)])));
+  [['role', state.roles], ['institution', state.institutions], ['family', state.families], ['topic', state.topics], ['supervisor', state.supervisors]].forEach(([facet, list]) => list.forEach((value) => entries.push([facet, value, controlLabel(facet, value)])));
   entries.forEach(([facet, value, label]) => {
     const button = document.createElement('button');
     button.type = 'button';
