@@ -5,7 +5,7 @@
     'Skip to main content': 'Aller au contenu principal',
     'Home': 'Accueil',
     'Contribute': 'Contribuer',
-    'Members': 'Membres',
+    'Community': 'Communauté',
     'Courses': 'Cours',
     'Speaker series': 'Série de conférences',
     'Speakers & Visitors': 'Conférences et visites',
@@ -18,19 +18,19 @@
     'Faculty-led research across Montréal': 'Recherche menée par le corps professoral à Montréal',
     'Quantum software connects Montréal to the world.': 'Le logiciel quantique relie Montréal au monde.',
     'Montréal Quantique connects researchers and graduate students working on quantum software across Montréal’s universities. This faculty-led initiative makes local expertise easier for industry to discover, helps students find courses across institutional boundaries, and supports exchange through a shared programme of talks and research visits.': 'Montréal Quantique relie les chercheuses, chercheurs et membres de la communauté étudiante des cycles supérieurs qui travaillent sur le logiciel quantique dans les universités montréalaises. Cette initiative dirigée par le corps professoral facilite la découverte de l’expertise locale par l’industrie, aide les étudiantes et étudiants à trouver des cours au-delà des frontières institutionnelles et soutient les échanges grâce à un programme commun de conférences et de visites de recherche.',
-    'Explore members': 'Explorer les membres',
+    'Explore the community': 'Découvrir la communauté',
     'How the initiative works': 'Fonctionnement de l’initiative',
     'A connected Montréal community': 'Une communauté montréalaise en réseau',
     'Quantum software': 'Logiciel quantique',
     'Illustrated map of Montréal showing seven participating institutions and IBM Quantum.': 'Carte illustrée de Montréal montrant sept établissements participants et IBM Quantum.',
     'Illustrated map of Montréal linking to our local quantum software community.': 'Carte illustrée de Montréal donnant accès à notre communauté locale en logiciel quantique.',
-    'View Université de Montréal members': 'Voir les membres de l’Université de Montréal',
-    'View Polytechnique Montréal members': 'Voir les membres de Polytechnique Montréal',
-    'View Concordia University members': 'Voir les membres de l’Université Concordia',
-    'View McGill University members': 'Voir les membres de l’Université McGill',
-    'View ÉTS Montréal, University of Québec members': 'Voir les membres de l’École de technologie supérieure, Université du Québec',
-    'View Université du Québec à Montréal members': 'Voir les membres de l’Université du Québec à Montréal',
-    'View Institut national de la recherche scientifique members': 'Voir les membres de l’Institut national de la recherche scientifique',
+    'Explore the Université de Montréal community': 'Découvrir la communauté de l’Université de Montréal',
+    'Explore the Polytechnique Montréal community': 'Découvrir la communauté de Polytechnique Montréal',
+    'Explore the Concordia University community': 'Découvrir la communauté de l’Université Concordia',
+    'Explore the McGill University community': 'Découvrir la communauté de l’Université McGill',
+    'Explore the ÉTS Montréal, University of Québec community': 'Découvrir la communauté de l’École de technologie supérieure, Université du Québec',
+    'Explore the Université du Québec à Montréal community': 'Découvrir la communauté de l’Université du Québec à Montréal',
+    'Explore the Institut national de la recherche scientifique community': 'Découvrir la communauté de l’Institut national de la recherche scientifique',
     'Visit IBM Quantum': 'Visiter IBM Quantum',
     'Map contents': 'Contenu de la carte',
     '7 university locations': '7 sites universitaires',
@@ -62,10 +62,10 @@
     'Discover the research community': 'Découvrir la communauté de recherche',
     'Research across the city': 'La recherche à travers la ville',
     'Quantum research across the island.': 'La recherche quantique à l’échelle de l’île.',
-    'Browse the draft member roster by institution and research topic. Profiles and tags remain in member review.': 'Parcourez la liste provisoire des membres par établissement et sujet de recherche. Les profils et étiquettes restent en révision par les membres.',
-    'The public roster is awaiting faculty approval. Directory discovery will become available with the first reviewed release.': 'La liste publique attend l’approbation du corps professoral. Le répertoire sera accessible dès la première version révisée.',
-    'Public roster forthcoming': 'Liste publique à venir',
-    'No member profiles have been approved for this production build.': 'Aucun profil de membre n’a encore été approuvé pour la version publique.',
+    'Browse the community by institution and research topic. Profiles and tags remain under review.': 'Parcourez la communauté par établissement et sujet de recherche. Les profils et les étiquettes sont toujours en cours de révision.',
+    'The public directory is awaiting faculty approval. Community discovery will become available with the first reviewed release.': 'Le répertoire public attend l’approbation du corps professoral. La communauté pourra être explorée dès la première version révisée.',
+    'Public directory forthcoming': 'Répertoire public à venir',
+    'No profiles have been approved for this production build.': 'Aucun profil n’a encore été approuvé pour la version publique.',
     'Study across university boundaries': 'Étudier au-delà des frontières universitaires',
     'Course discovery and cross-registration guidance will help graduate students navigate existing inter-university frameworks.': 'Le repérage des cours et les renseignements sur l’inscription interuniversitaire aideront la communauté étudiante des cycles supérieurs à utiliser les mécanismes existants.',
     'See the course catalogue plan': 'Voir le projet de catalogue de cours',
@@ -82,7 +82,7 @@
     'Approved programme announcements, research highlights, and calls will appear here as the real roster is curated.': 'Les annonces approuvées, les faits saillants de la recherche et les appels seront publiés ici à mesure que la liste réelle sera constituée.',
     'View news status': 'Voir l’état des actualités',
     'Show faculty / PIs only': 'Afficher seulement le corps professoral / les CP',
-    'Counts show listed members, not research quality.': 'Les nombres indiquent les membres répertoriés, et non la qualité de la recherche.',
+    'Counts show listed people, not research quality.': 'Les nombres indiquent les personnes répertoriées, et non la qualité de la recherche.',
     'Research topics': 'Sujets de recherche',
     'Show controls': 'Afficher les filtres',
     'Hide controls': 'Masquer les filtres',
@@ -216,10 +216,10 @@
     'No public course records yet': 'Aucune fiche de cours publique pour le moment',
     'The public catalogue will open after institutions verify course records, offering evidence, and official links.': 'Le catalogue public ouvrira après la vérification institutionnelle des fiches de cours, des preuves d’offre et des liens officiels.',
     'People and expertise': 'Personnes et expertise',
-    'Review the initial draft member roster.': 'Consultez la liste provisoire initiale des membres.',
-    'The public roster will appear here after faculty review and approval.': 'La liste publique paraîtra ici après révision et approbation professorales.',
+    'Review the initial community directory.': 'Consultez la première version du répertoire de la communauté.',
+    'The public directory will appear here after faculty review and approval.': 'Le répertoire public paraîtra ici après révision et approbation professorales.',
     'Profiles are ordered alphabetically and carry no ranking.': 'Les profils sont classés par ordre alphabétique et n’établissent aucun classement.',
-    'Filter members': 'Filtrer les membres',
+    'Filter people': 'Filtrer les personnes',
     'Name, topic, institution': 'Nom, sujet, établissement',
     'Role': 'Rôle',
     'Faculty / PI': 'Corps professoral / CP',
@@ -233,8 +233,8 @@
     'Directory view': 'Affichage du répertoire',
     'Cards': 'Cartes',
     'List': 'Liste',
-    'members': 'membres',
-    'No members match these filters': 'Aucun membre ne correspond à ces filtres',
+    'people': 'personnes',
+    'No people match these filters': 'Aucune personne ne correspond à ces filtres',
     'Try removing one or more filters or searching with a broader term.': 'Retirez un ou plusieurs filtres ou utilisez un terme de recherche plus général.',
     'Clear all filters': 'Effacer tous les filtres',
     'Current results': 'Résultats actuels',
@@ -291,7 +291,7 @@
     'Unit': 'Unité',
     'Supervision': 'Direction de recherche',
     'No linked students in this preview.': 'Aucun membre de la communauté étudiante lié dans cet aperçu.',
-    'Related members': 'Membres associés',
+    'Related people': 'Profils associés',
     'Related profiles will appear after detailed research topics are reviewed.': 'Les profils associés paraîtront après la révision des sujets de recherche détaillés.',
     'Shared research topic': 'Sujet de recherche commun',
     'Course record': 'Fiche du cours',
@@ -350,16 +350,16 @@
     const draftProfileMatch = value.match(/^Draft faculty profile for (.+) at (.+)\. Research description and detailed topic tags are being prepared for review\.$/);
     if (draftProfileMatch) return `Profil professoral provisoire de ${draftProfileMatch[1]} à ${draftProfileMatch[2]}. La description de recherche et les sujets détaillés sont en préparation pour révision.`;
     if (value === 'This private preview record identifies a faculty member in the initial Montréal Quantique roster. Public biography text and research classifications will be added after faculty review.') return 'Cette fiche d’aperçu privé identifie un membre du corps professoral dans la liste initiale de Montréal Quantique. La biographie publique et les classifications de recherche seront ajoutées après la révision du corps professoral.';
-    const countMatch = value.match(/^(\d+) (members|courses)$/);
-    if (countMatch) return `${countMatch[1]} ${countMatch[2] === 'members' ? 'membres' : 'cours'}`;
+    const countMatch = value.match(/^(\d+) (people|courses)$/);
+    if (countMatch) return `${countMatch[1]} ${countMatch[2] === 'people' ? 'personnes' : 'cours'}`;
     const searchMatch = value.match(/^Search: (.+)$/);
     if (searchMatch) return `Recherche : ${searchMatch[1]}`;
     const searchChipMatch = value.match(/^Search: (.+) ×$/);
     if (searchChipMatch) return `Recherche : ${searchChipMatch[1]} ×`;
     const removeMatch = value.match(/^Remove (.+) filter$/);
     if (removeMatch) return `Retirer le filtre ${removeMatch[1]}`;
-    const listedMatch = value.match(/^(.+), (\d+) listed (member|members)$/);
-    if (listedMatch) return `${listedMatch[1]}, ${listedMatch[2]} membre${listedMatch[2] === '1' ? '' : 's'} répertorié${listedMatch[2] === '1' ? '' : 's'}`;
+    const listedMatch = value.match(/^(.+), (\d+) listed (person|people)$/);
+    if (listedMatch) return `${listedMatch[1]}, ${listedMatch[2]} personne${listedMatch[2] === '1' ? '' : 's'} répertoriée${listedMatch[2] === '1' ? '' : 's'}`;
     return value;
   }
 

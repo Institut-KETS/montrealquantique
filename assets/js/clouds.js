@@ -28,8 +28,8 @@ function updateClouds() {
       if (counter) counter.textContent = `(${count})`;
       const label = item.querySelector('.cloud-label').textContent;
       const accessible = document.documentElement.lang === 'fr'
-        ? `${label}, ${count} membre${count === 1 ? '' : 's'} répertorié${count === 1 ? '' : 's'}`
-        : `${label}, ${count} listed ${count === 1 ? 'member' : 'members'}`;
+        ? `${label}, ${count} personne${count === 1 ? '' : 's'} répertoriée${count === 1 ? '' : 's'}`
+        : `${label}, ${count} listed ${count === 1 ? 'person' : 'people'}`;
       item.setAttribute('aria-label', accessible);
     });
   });
