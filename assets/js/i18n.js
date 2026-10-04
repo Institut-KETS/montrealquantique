@@ -238,7 +238,7 @@
     'Try removing one or more filters or searching with a broader term.': 'Retirez un ou plusieurs filtres ou utilisez un terme de recherche plus général.',
     'Clear all filters': 'Effacer tous les filtres',
     'Current results': 'Résultats actuels',
-    'Explore the visible research community': 'Explorer la communauté de recherche visible',
+    'Explore our research community': 'Explorer notre communauté de recherche',
     'These counts update with the directory filters. A person is counted once for each listed topic or institution.': 'Ces décomptes suivent les filtres du répertoire. Une personne est comptée une fois pour chaque sujet ou établissement répertorié.',
     'Programme updates': 'Actualités du programme',
     'Approved announcements, research highlights, course updates, and confirmed programme activity.': 'Annonces approuvées, faits saillants de la recherche, mises à jour des cours et activités confirmées du programme.',
