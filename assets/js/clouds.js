@@ -16,14 +16,24 @@ function memberSource() {
   return [...document.querySelectorAll('[data-cloud-member]')];
 }
 
+function allMemberSource() {
+  const members = [...document.querySelectorAll('[data-cloud-member]')];
+  return members.length ? members : [...document.querySelectorAll('[data-member-card]')];
+}
+
 function updateClouds() {
-  const members = memberSource();
+  const filteredMembers = memberSource();
+  const allMembers = allMemberSource();
   const facultyOnly = Boolean(document.querySelector('[data-cloud-faculty-only]:checked'));
+  const selectedInstitutions = new Set(new URLSearchParams(window.location.search).getAll('institution'));
   ['topic', 'institution'].forEach((facet) => {
+    const members = facet === 'institution' ? allMembers : filteredMembers;
     const counts = countFacet(members, facet, facultyOnly);
     document.querySelectorAll(`[data-cloud-item][data-facet="${facet}"]`).forEach((item) => {
       const count = counts.get(item.dataset.value) || 0;
       item.hidden = count === 0;
+      if (facet === 'institution' && selectedInstitutions.has(item.dataset.value)) item.setAttribute('aria-current', 'true');
+      else item.removeAttribute('aria-current');
       const counter = item.querySelector('.cloud-count');
       if (counter) counter.textContent = `(${count})`;
       const label = item.querySelector('.cloud-label').textContent;

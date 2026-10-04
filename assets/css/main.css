@@ -170,6 +170,7 @@ body.preview-locked #preview-site { visibility: hidden; }
 .word-cloud { display: flex; flex-wrap: wrap; gap: .58rem; align-items: center; padding-block: 1.5rem; }
 .word-cloud .cloud-tag { display: inline-flex; align-items: center; gap: .38rem; min-height: 2.35rem; border: 1px solid var(--tag-border,var(--line)); border-radius: 999px; background: var(--tag-bg,var(--paper-deep)); color: var(--ink); padding: .48rem .8rem; font-size: .82rem; font-weight: 720; line-height: 1.15; text-decoration: none; transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
 .word-cloud .cloud-tag:hover { border-color: #89958f; box-shadow: 0 .35rem 1rem rgb(24 40 35 / .08); transform: translateY(-1px); }
+.word-cloud .cloud-tag[aria-current="true"] { border-color: var(--ink); box-shadow: 0 0 0 2px #fff,0 0 0 4px var(--ink); }
 .word-cloud .cloud-count { color: #59625f; font-size: .8em; font-variant-numeric: tabular-nums; font-weight: 800; }
 .word-cloud .topic-violet, .word-cloud .institution-cloud-tag-1 { --tag-bg: var(--spice-soft); --tag-border: #dbb9c4; }
 .word-cloud .topic-indigo, .word-cloud .institution-cloud-tag-0 { --tag-bg: var(--atlas-blue-soft); --tag-border: #bdcde0; }
