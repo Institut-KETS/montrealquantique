@@ -548,3 +548,9 @@ th { font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; }
   .hero,.page-header,.program-band { background: #fff; }
   .member-card,.course-card,.committee-card { break-inside: avoid; box-shadow: none; }
 }
+
+/* Preserve the complete approved photographs; never crop faces into banners. */
+.landing-image { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: center; margin-top: 0; margin-bottom: clamp(2rem, 4vw, 4rem); }
+.landing-image img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.landing-image figcaption > p:last-child { font-size: clamp(1.25rem, 2.2vw, 2rem); line-height: 1.35; max-width: 24ch; }
+@media (max-width: 640px) { .landing-image { grid-template-columns: 1fr; gap: 1rem; } .landing-image figcaption > p:last-child { max-width: none; } }
