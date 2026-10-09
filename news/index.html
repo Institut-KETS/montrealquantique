@@ -26,7 +26,7 @@
 <meta name="twitter:title" content="News">
 <meta name="twitter:description" content="News and updates from Montréal’s quantum software research community, including research, courses, talks and visits.">
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/assets/css/main.css?v=1791562435">
+<link rel="stylesheet" href="/assets/css/main.css?v=1791563662">
 <title>News · Montréal Quantique</title>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"Montréal Quantique","url":"https://montrealquantique.ca/","description":"Montréal Quantique connects researchers and graduate students in quantum software across Montréal through shared expertise, courses, talks and research visits.","inLanguage":["en-CA","fr-CA"]}
@@ -78,7 +78,19 @@
   <figcaption><p class="eyebrow"><span data-theme-en>Connected through quantum software</span><span data-theme-fr hidden>Réunis autour du logiciel quantique</span></p><p><span data-theme-en>Research, learning and exchange across Montréal’s universities.</span><span data-theme-fr hidden>Recherche, formation et échanges entre les universités montréalaises.</span></p></figcaption>
 </figure>
 
-<section class="page-shell policy-note"><h2><span data-theme-en>Submit an update</span><span data-theme-fr hidden>Proposer une actualité</span></h2><p><span data-theme-en>Community members may propose a factual item for review. Every item requires an official source link; publication follows editorial review and approval.</span><span data-theme-fr hidden>Les membres de la communauté peuvent proposer une actualité factuelle aux fins de révision. Chaque proposition doit comprendre un lien vers une source officielle; la publication suit une révision et une approbation éditoriales.</span></p><p><a class="button button-secondary" href="mailto:jacob.biamonte@etsmtl.ca?subject=Montr%C3%A9al%20Quantique%20%E2%80%94%20News%20submission"><span data-theme-en>Propose a news item</span><span data-theme-fr hidden>Proposer une actualité</span></a></p></section>
+<section class="page-shell policy-note"><h2><span data-theme-en>Submit an update</span><span data-theme-fr hidden>Proposer une actualité</span></h2><p><span data-theme-en>Community members may propose a factual item for review. Every item requires an official source link; publication follows editorial review and approval.</span><span data-theme-fr hidden>Les membres de la communauté peuvent proposer une actualité factuelle aux fins de révision. Chaque proposition doit comprendre un lien vers une source officielle; la publication suit une révision et une approbation éditoriales.</span></p>
+<form class="news-submission-form" data-news-submission>
+  <div class="news-form-grid">
+    <label><span data-theme-en>Type of update</span><span data-theme-fr hidden>Type d’actualité</span><select name="type" required><option value="">Select / Choisir</option><option value="Research visitor / Visite de recherche">Research visitor / Visite de recherche</option><option value="Major event / Grand événement">Major event / Grand événement</option><option value="Regular talk / Conférence régulière">Regular talk / Conférence régulière</option><option value="Course or summer school / Cours ou école d’été">Course or summer school / Cours ou école d’été</option><option value="Paper or project / Article ou projet">Paper or project / Article ou projet</option></select></label>
+    <label><span data-theme-en>Title</span><span data-theme-fr hidden>Titre</span><input name="title" type="text" required maxlength="160"></label>
+    <label><span data-theme-en>Date, if applicable</span><span data-theme-fr hidden>Date, le cas échéant</span><input name="date" type="date"></label>
+    <label><span data-theme-en>Official source URL</span><span data-theme-fr hidden>Lien vers la source officielle</span><input name="source" type="url" required placeholder="https://"></label>
+  </div>
+  <label><span data-theme-en>Brief factual summary</span><span data-theme-fr hidden>Bref résumé factuel</span><textarea name="summary" required rows="5" maxlength="1200"></textarea></label>
+  <label><span data-theme-en>Submitter name</span><span data-theme-fr hidden>Nom de la personne qui propose l’actualité</span><input name="submitter" type="text" maxlength="120"></label>
+  <p class="form-note"><span data-theme-en>Do not include private or unpublished information. Submitting opens a prefilled email in your mail application; it does not publish or send anything automatically.</span><span data-theme-fr hidden>N’incluez aucun renseignement privé ou inédit. Le formulaire ouvre un courriel prérempli dans votre application de messagerie; rien n’est publié ni envoyé automatiquement.</span></p>
+  <div class="news-form-actions"><button class="button button-primary" type="submit"><span data-theme-en>Prepare submission</span><span data-theme-fr hidden>Préparer la proposition</span></button><a href="mailto:jacob.biamonte@etsmtl.ca?subject=Montr%C3%A9al%20Quantique%20%E2%80%94%20News%20submission"><span data-theme-en>Email directly</span><span data-theme-fr hidden>Envoyer un courriel directement</span></a></div>
+</form></section>
 <section class="page-shell news-grid"><article><p class="eyebrow">Governance · 1 October 2026</p><h2><a href="/news/example-news-04/">Example News 04 · Contribution workflow ready for review</a></h2><p>A synthetic announcement used to review the contribution, validation, and approval workflow.</p></article><article><p class="eyebrow">Research exchange · 27 September 2026</p><h2><a href="/news/example-news-03/">Example News 03 · Visitor records connect activities</a></h2><p>A synthetic update showing how one visitor may be linked to several activities without double counting.</p></article><article><p class="eyebrow">Speaker series · 23 September 2026</p><h2><a href="/news/example-news-02/">Example News 02 · Speaker-series method published</a></h2><p>A synthetic note explaining the transparent lead-host rotation used in this preview.</p></article><article><p class="eyebrow">Courses · 20 September 2026</p><h2><a href="/news/example-news-01/">Example News 01 · Course catalogue preview opens</a></h2><p>A synthetic update demonstrating how verified course records and offering evidence are presented.</p></article></section>
 
       </main>
@@ -105,7 +117,7 @@
 
     </div>
     <script src="/assets/js/portraits.js" defer></script>
-    
+    <script type="module" src="/assets/js/news-submission.js"></script>
     <script src="/assets/js/preview-gate.js"></script>
   </body>
 </html>

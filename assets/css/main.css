@@ -363,6 +363,15 @@ body.preview-locked #preview-site { visibility: hidden; }
 .status-usual-term-unconfirmed, .status-proposed, .status-pending { background: #f0ecf8; border-color: #d7cfea; }
 .status-cancelled, .status-postponed { background: #f7edf1; border-color: #e1cbd4; }
 .policy-note { margin-bottom: 5rem; border-top: 1px solid var(--ink); padding-top: 2rem; max-width: 56rem; }
+.news-submission-form { display: grid; gap: 1rem; margin-top: 1.75rem; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; padding: clamp(1rem,3vw,1.5rem); }
+.news-form-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; }
+.news-submission-form label { display: grid; gap: .38rem; color: #35403c; font-size: .74rem; font-weight: 780; }
+.news-submission-form input, .news-submission-form select, .news-submission-form textarea { width: 100%; border: 1px solid var(--line-strong); border-radius: .55rem; background: #fff; color: var(--ink); padding: .72rem .78rem; font: inherit; font-weight: 500; }
+.news-submission-form textarea { resize: vertical; min-height: 8rem; }
+.news-submission-form input:focus, .news-submission-form select:focus, .news-submission-form textarea:focus { outline: 2px solid var(--atlas-blue); outline-offset: 2px; }
+.form-note { margin: 0; color: var(--muted); font-size: .76rem; }
+.news-form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+.news-form-actions a { font-size: .8rem; font-weight: 740; }
 .programme-stats { display: grid; grid-template-columns: repeat(3,1fr); border-bottom: 1px solid var(--line); }
 .programme-stats article { padding: 2rem; border-right: 1px solid var(--line); }
 .programme-stats article:last-child { border-right: 0; }
@@ -502,7 +511,7 @@ th { font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; }
   .home-section, .directory-clouds { padding-block: 4.2rem; }
   .cloud-controls { align-items: flex-start; flex-direction: column; }
   .member-card { min-height: 0; }
-  .course-grid, .visitor-grid, .news-grid, .programme-stats { grid-template-columns: 1fr; }
+  .course-grid, .visitor-grid, .news-grid, .programme-stats, .news-form-grid { grid-template-columns: 1fr; }
   .programme-stats article { border-right: 0; border-bottom: 1px solid var(--line); }
   .event-row { grid-template-columns: 1fr; gap: .7rem; }
   .rotation-grid th, .rotation-grid td { padding: .45rem .3rem; font-size: .76rem; }
