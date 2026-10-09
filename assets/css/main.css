@@ -560,6 +560,29 @@ th { font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; }
   .member-card,.course-card,.committee-card { break-inside: avoid; box-shadow: none; }
 }
 
+.directory-intro-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: .65rem 2rem; }
+.directory-intro-meta p { margin: 0; }
+.student-clubs-link { font-size: .9rem; font-weight: 720; white-space: nowrap; text-underline-offset: .25em; }
+.clubs-page-header { padding-block: 3rem 1.5rem; max-width: 48rem; border-bottom: 0; }
+.clubs-page-header::before, .clubs-page-header::after { display: none; }
+.clubs-page-header p:last-child { max-width: 40rem; }
+.club-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin-bottom: 4rem; }
+.club-card { min-width: 0; border: 1px solid var(--line); border-radius: .75rem; background: #fff; }
+.club-link { display: flex; flex-direction: column; height: 100%; padding: 2rem; border-radius: inherit; text-decoration: none; }
+.club-link:hover { background: var(--paper-deep); }
+.club-link:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+.club-logo { display: grid; place-items: center; height: 14rem; margin-bottom: 1.5rem; background: #fff; border-radius: .35rem; }
+.club-logo img { width: 13rem; max-width: 100%; height: 12rem; object-fit: contain; }
+.club-name { margin: 0 0 .35rem; font: 560 1.9rem/1.1 var(--serif); letter-spacing: -.025em; }
+.club-institution { margin: 0; color: var(--muted); font-size: .85rem; }
+.club-destination { margin: auto 0 0; padding-top: 1.5rem; font-size: .86rem; font-weight: 720; text-decoration: underline; text-underline-offset: .25em; }
+@media (max-width: 640px) {
+  .club-grid { grid-template-columns: 1fr; }
+  .club-link { padding: 1.4rem; }
+  .club-logo { height: 12rem; }
+  .clubs-page-header { padding-top: 2rem; }
+}
+
 /* Preserve the complete approved photographs; never crop faces into banners. */
 .landing-image { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: center; margin-top: 0; margin-bottom: clamp(2rem, 4vw, 4rem); }
 .landing-image img { display: block; width: 100%; height: auto; border-radius: 12px; }
