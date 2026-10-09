@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://montrealquantique.ca/courses/concordia-comp-691-quantum-information/</loc>
+<lastmod>2026-10-09T13:17:57-04:00</lastmod>
+</url>
+<url>
+<loc>https://montrealquantique.ca/courses/ets-gti650/</loc>
+<lastmod>2026-10-09T13:17:57-04:00</lastmod>
+</url>
+<url>
+<loc>https://montrealquantique.ca/courses/ets-mti882-quantum-algorithms/</loc>
+<lastmod>2026-10-09T13:17:57-04:00</lastmod>
+</url>
+<url>
 <loc>https://montrealquantique.ca/courses/concordia-phys-468-637/</loc>
 <lastmod>2026-10-09T12:34:22-04:00</lastmod>
 </url>
