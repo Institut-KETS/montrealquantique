@@ -270,13 +270,20 @@ body.preview-locked #preview-site { visibility: hidden; }
 .card-socials { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .3rem; }
 .social-chip { border: 1px solid var(--line); border-radius: 999px; background: var(--paper-deep); padding: .2rem .45rem; color: #3d4643; font-size: .64rem; font-weight: 720; text-decoration: none; }
 .social-chip:hover { border-color: var(--line-strong); background: #fff; }
-.member-grid.is-list { grid-template-columns: 1fr; }
-.member-grid.is-list .member-card { display: grid; grid-template-columns: 10rem minmax(0,1fr); gap: 0; align-items: stretch; min-height: 0; }
-.member-grid.is-list .member-card-top { grid-row: 1; min-height: 100%; }
-.member-grid.is-list .member-portrait-link { height: 100%; min-height: 13rem; aspect-ratio: auto; }
-.member-grid.is-list .member-card-body { padding: 1.2rem 1.35rem; }
-.member-grid.is-list .member-card-identity { padding-top: 0; }
-.member-grid.is-list .member-description { flex: 0; -webkit-line-clamp: 3; }
+.member-grid.is-list { grid-template-columns: 1fr; gap: .5rem; }
+.member-grid.is-list .member-card { display: grid; grid-template-columns: 4.5rem minmax(0,1fr); gap: .85rem; align-items: start; min-height: 0; padding: .8rem; }
+.member-grid.is-list .member-card-top { border-radius: .3rem; overflow: hidden; }
+.member-grid.is-list .member-portrait-link { width: 4.5rem; height: 4.5rem; min-height: 0; aspect-ratio: 1; }
+.member-grid.is-list .member-portrait { object-fit: contain; }
+.member-grid.is-list .avatar { font-size: 1.5rem; }
+.member-grid.is-list .role-badge, .member-grid.is-list .member-description, .member-grid.is-list .member-card-actions { display: none; }
+.member-grid.is-list .member-card-body { padding: 0; gap: .5rem; }
+.member-grid.is-list .member-card-identity { padding: 0; border: 0; }
+.member-grid.is-list .member-card h3 { font-size: 1.25rem; margin-bottom: .25rem; }
+.member-grid.is-list .member-title { font-size: .75rem; }
+.member-grid.is-list .member-institutions { font-size: .72rem; margin-top: .2rem; }
+.member-grid.is-list .card-tags { margin: 0; gap: .25rem; }
+.member-grid.is-list .tag { font-size: .62rem; padding: .18rem .45rem; }
 .directory-clouds { padding-block: 5rem; border-top: 1px solid var(--line); }
 
 @media (min-width: 1180px) {
@@ -502,8 +509,8 @@ th { font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; }
   .programme-stats article { border-right: 0; border-bottom: 1px solid var(--line); }
   .event-row { grid-template-columns: 1fr; gap: .7rem; }
   .rotation-grid th, .rotation-grid td { padding: .45rem .3rem; font-size: .76rem; }
-  .member-grid.is-list .member-card { display: flex; }
-  .member-grid.is-list .member-portrait-link { min-height: 0; aspect-ratio: 1; }
+  .member-grid.is-list .member-card { grid-template-columns: 3.5rem minmax(0,1fr); gap: .65rem; padding: .7rem; }
+  .member-grid.is-list .member-portrait-link { width: 3.5rem; height: 3.5rem; }
   .results-toolbar { align-items: flex-start; flex-direction: column; }
   .profile-media, .profile-portrait-frame, .profile-portrait, .profile-initials { width: 8.5rem; }
   .profile-portrait { height: 8.5rem; }
