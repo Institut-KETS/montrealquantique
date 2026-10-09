@@ -7,7 +7,7 @@ const values = (value = '') => value.split(',').filter(Boolean);
 export function matchesMember(member, state) {
   const search = normalizeText(member.searchText || `${member.name || ''} ${member.summary || ''}`);
   if (state.q && !search.includes(normalizeText(state.q))) return false;
-  const checks = [['roles', [member.role]], ['institutions', member.institutions || []], ['families', member.families || []], ['topics', member.topics || []], ['supervisors', member.supervisors || []]];
+  const checks = [['roles', [member.role]], ['institutions', member.institutions || []], ['topics', member.topics || []]];
   return checks.every(([facet, memberValues]) => {
     const selected = state[facet] || [];
     return selected.length === 0 || selected.some((value) => memberValues.includes(value));
@@ -15,13 +15,13 @@ export function matchesMember(member, state) {
 }
 
 export function stateFromParams(params) {
-  return { q: params.get('q') || '', roles: params.getAll('role'), institutions: params.getAll('institution'), families: params.getAll('family'), topics: params.getAll('topic'), supervisors: params.getAll('supervisor') };
+  return { q: params.get('q') || '', roles: params.getAll('role'), institutions: params.getAll('institution'), topics: params.getAll('topic') };
 }
 
 export function paramsFromState(state) {
   const params = new URLSearchParams();
   if (state.q) params.set('q', state.q);
-  [['role', state.roles], ['institution', state.institutions], ['family', state.families], ['topic', state.topics], ['supervisor', state.supervisors]].forEach(([key, selected]) => [...(selected || [])].sort().forEach((value) => params.append(key, value)));
+  [['role', state.roles], ['institution', state.institutions], ['topic', state.topics]].forEach(([key, selected]) => [...(selected || [])].sort().forEach((value) => params.append(key, value)));
   return params;
 }
 
@@ -38,17 +38,17 @@ if (filterPanel) {
 }
 
 function cardData(card) {
-  return { searchText: card.textContent, role: card.dataset.role, institutions: values(card.dataset.institutions), families: values(card.dataset.families), topics: values(card.dataset.topics), supervisors: values(card.dataset.supervisors) };
+  return { searchText: card.textContent, role: card.dataset.role, institutions: values(card.dataset.institutions), topics: values(card.dataset.topics) };
 }
 
 function stateFromControls() {
   const selected = (name) => controls.filter((input) => input.dataset.filter === name && input.checked).map((input) => input.value);
-  return { q: query?.value.trim() || '', roles: selected('role'), institutions: selected('institution'), families: selected('family'), topics: selected('topic'), supervisors: selected('supervisor') };
+  return { q: query?.value.trim() || '', roles: selected('role'), institutions: selected('institution'), topics: selected('topic') };
 }
 
 function setControls(state) {
   if (query) query.value = state.q;
-  const map = { role: state.roles, institution: state.institutions, family: state.families, topic: state.topics, supervisor: state.supervisors };
+  const map = { role: state.roles, institution: state.institutions, topic: state.topics };
   controls.forEach((input) => { input.checked = map[input.dataset.filter].includes(input.value); });
 }
 
@@ -63,7 +63,7 @@ function renderChips(state) {
   container.replaceChildren();
   const entries = [];
   if (state.q) entries.push(['q', state.q, `Search: ${state.q}`]);
-  [['role', state.roles], ['institution', state.institutions], ['family', state.families], ['topic', state.topics], ['supervisor', state.supervisors]].forEach(([facet, list]) => list.forEach((value) => entries.push([facet, value, controlLabel(facet, value)])));
+  [['role', state.roles], ['institution', state.institutions], ['topic', state.topics]].forEach(([facet, list]) => list.forEach((value) => entries.push([facet, value, controlLabel(facet, value)])));
   entries.forEach(([facet, value, label]) => {
     const button = document.createElement('button');
     button.type = 'button';
@@ -92,7 +92,10 @@ function applyFilters({ replace = false } = {}) {
   if (empty) empty.hidden = count !== 0;
   renderChips(state);
   const params = paramsFromState(state).toString();
-  const url = `${window.location.pathname}${params ? `?${params}` : ''}`;
+  const nextParams = new URLSearchParams(params);
+  const language = new URLSearchParams(window.location.search).get('lang');
+  if (language === 'en' || language === 'fr') nextParams.set('lang', language);
+  const url = `${window.location.pathname}${nextParams.size ? `?${nextParams}` : ''}${window.location.hash}`;
   window.history[replace ? 'replaceState' : 'pushState']({}, '', url);
   document.dispatchEvent(new CustomEvent('directory:updated', { detail: { count } }));
 }

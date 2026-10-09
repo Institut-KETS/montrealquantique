@@ -340,13 +340,43 @@
   const observedAttributes = ['placeholder', 'title'];
   const originalTitle = document.title;
 
+  function languageFromUrl() {
+    try {
+      const value = new URL(window.location.href).searchParams.get('lang');
+      return supported.has(value) ? value : null;
+    } catch (_) {
+      return null;
+    }
+  }
+
   function savedLanguage() {
+    const fromUrl = languageFromUrl();
+    if (fromUrl) return fromUrl;
     try {
       const value = localStorage.getItem(STORAGE_KEY);
       return supported.has(value) ? value : 'en';
     } catch (_) {
       return 'en';
     }
+  }
+
+  function setLanguageInUrl(language) {
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', language);
+    window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
+  }
+
+  function syncInternalLinks(language) {
+    document.querySelectorAll('a[href]').forEach((link) => {
+      const raw = link.getAttribute('href');
+      if (!raw || raw.startsWith('#') || raw.startsWith('mailto:') || raw.startsWith('tel:')) return;
+      try {
+        const url = new URL(raw, window.location.href);
+        if (url.origin !== window.location.origin) return;
+        url.searchParams.set('lang', language);
+        link.setAttribute('href', `${url.pathname}${url.search}${url.hash}`);
+      } catch (_) { /* leave malformed or non-HTTP links untouched */ }
+    });
   }
 
   function translateValue(value) {
@@ -427,7 +457,9 @@
     document.querySelectorAll('[data-language]').forEach((button) => {
       button.setAttribute('aria-pressed', String(button.dataset.language === next));
     });
+    syncInternalLinks(next);
     if (persist) {
+      setLanguageInUrl(next);
       try { localStorage.setItem(STORAGE_KEY, next); } catch (_) { /* storage is optional */ }
     }
     document.dispatchEvent(new CustomEvent('mq:languagechange', { detail: { language: next } }));
@@ -438,6 +470,7 @@
   document.querySelectorAll('[data-language]').forEach((button) => {
     button.addEventListener('click', () => applyLanguage(button.dataset.language));
   });
+  window.addEventListener('popstate', () => applyLanguage(languageFromUrl() || savedLanguage(), false));
 
   const observer = new MutationObserver((mutations) => {
     const language = document.documentElement.lang;
