@@ -123,7 +123,7 @@ body.preview-locked #preview-site { visibility: hidden; }
 .map-marker-pin::after { content: ""; position: absolute; width: .16rem; height: .16rem; left: 50%; top: 50%; border-radius: 50%; background: #fff; transform: translate(-50%,-50%); }
 .map-marker-label { position: absolute; left: var(--label-left,1.05rem); top: var(--label-top,-1.1rem); white-space: nowrap; border: 1px solid color-mix(in srgb,var(--marker) 48%,#fff); border-radius: 999px; background: rgb(255 255 255 / .92); color: var(--marker); box-shadow: 0 .16rem .45rem rgb(22 38 33 / .14); padding: .18rem .36rem; font-size: .52rem; font-weight: 900; line-height: 1; letter-spacing: .015em; }
 .map-marker-udem { --marker: #0057a8; --label-left: -3.05rem; --label-top: -1.7rem; left: 31%; top: 31%; }
-.map-marker-poly { --marker: #173f6b; --label-left: -2.1rem; --label-top: .5rem; left: 27.5%; top: 33.5%; }
+.map-marker-poly { --marker: #173f6b; --label-left: -2.1rem; --label-top: .5rem; left: 25%; top: 29%; }
 .map-marker-concordia { --marker: #8b1e3f; --label-left: -4.6rem; --label-top: .5rem; left: 38.5%; top: 50%; }
 .map-marker-mcgill { --marker: #d42f3f; --label-left: 1rem; --label-top: -1.65rem; left: 45%; top: 45%; }
 .map-marker-ets { --marker: #be1e2d; --label-left: -1.1rem; --label-top: .5rem; left: 35.5%; top: 61%; }
