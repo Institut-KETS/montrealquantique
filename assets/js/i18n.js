@@ -11,6 +11,7 @@
     'Speakers & Visitors': 'Conférences et visites',
     'Speakers and visitors': 'Conférences et visites',
     'News': 'Actualités',
+    'Governance': 'Gouvernance',
     'Menu': 'Menu',
     'Primary navigation': 'Navigation principale',
     'Language': 'Langue',
