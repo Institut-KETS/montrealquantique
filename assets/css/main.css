@@ -589,3 +589,49 @@ th { font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; }
 .landing-image img { display: block; width: 100%; height: auto; border-radius: 12px; }
 .landing-image figcaption > p:last-child { font-size: clamp(1.25rem, 2.2vw, 2rem); line-height: 1.35; max-width: 24ch; }
 @media (max-width: 640px) { .landing-image { grid-template-columns: 1fr; gap: 1rem; } .landing-image figcaption > p:last-child { max-width: none; } }
+
+/* About: sequential governance bodies, compact goals, and numbered rosters. */
+.governance-page .about-header { padding-bottom: 2rem; }
+.governance-page .about-header::before, .governance-page .about-header::after { display: none; }
+.governance-page .about-header > p { max-width: 52rem; }
+.governance-page .about-header .about-acknowledgement { margin-top: 1.25rem; color: var(--muted); font-size: .9rem; }
+.governance-page .about-nav { display: flex; flex-wrap: wrap; gap: .5rem 2rem; padding-block: 1rem; border-bottom: 1px solid var(--line); }
+.governance-page .about-nav a { padding-block: .3rem; font-size: .9rem; font-weight: 720; }
+.governance-page section[id] { scroll-margin-top: 6rem; }
+.governance-page .purpose-section { padding-block: 2.8rem 3rem; border-bottom: 0; }
+.governance-page .section-intro { margin-bottom: 1.5rem; }
+.governance-page .purpose-section h2, .governance-page .governance-overview h2, .governance-page .participation-section h2 { margin: 0 0 1rem; font: 560 clamp(2rem, 3.5vw, 2.8rem)/1.12 var(--serif); letter-spacing: -.03em; }
+.governance-page .goal-list { gap: 0 2.5rem; margin-top: 0; }
+.governance-page .goal-list li { min-height: 0; border: 0; border-top: 1px solid var(--line); border-radius: 0; padding: 1rem 0 1.1rem 2.3rem; font-size: .94rem; }
+.governance-page .goal-list li::before { top: 1.15rem; left: 0; font-size: 1rem; }
+.governance-page .goal-list strong { margin-bottom: .2rem; }
+.governance-page .governance-community-photo { margin-bottom: 3rem; }
+.governance-page .governance-overview { display: block; padding-block: 2.8rem 2rem; border-top: 1px solid var(--line); border-bottom: 0; }
+.governance-page .governance-overview > p, .governance-page .governance-body > p, .governance-page .participation-section > p { max-width: 54rem; }
+.governance-page .governance-status { margin-top: 1.5rem; border-radius: 0; background: var(--paper-deep); }
+.governance-page .governance-body { padding-block: 2.3rem; border-top: 1px solid var(--line); background: var(--paper); }
+.governance-page .governance-body h3, .governance-page .participation-section h3 { margin: 0 0 .8rem; font: 560 clamp(1.5rem, 2.7vw, 2rem)/1.2 var(--serif); letter-spacing: -.02em; }
+.governance-page .governance-body > p, .governance-page .participation-section p { color: var(--muted); }
+.governance-page .governance-body > p:last-child { margin-bottom: 0; }
+.governance-page .governance-body .roster-label { margin: 1.5rem 0 .6rem; color: var(--ink); font-size: .75rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+.governance-page .committee-roster { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 3rem; margin: 0 0 1.2rem; padding-inline-start: 1.5rem; }
+.governance-page .committee-roster > li { min-width: 0; padding: .7rem .3rem .7rem .25rem; border-bottom: 1px solid var(--line); overflow-wrap: break-word; }
+.governance-page .committee-roster > li::marker { color: var(--atlas-blue); font-weight: 720; }
+.governance-page .roster-name { display: block; font-weight: 750; }
+.governance-page .roster-details { display: block; color: var(--muted); font-size: .9em; }
+.governance-page .participation-section { border-top: 1px solid var(--line); padding-block: 3rem 4rem; }
+.governance-page .participation-section > h3 { margin-top: 2rem; }
+.governance-page .about-contact { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 3rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+.governance-page .about-contact > article { min-width: 0; }
+.governance-page .participation-links { display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; margin: 1rem 0 0; padding: 0; list-style: none; }
+.governance-page .participation-links a { display: inline-block; padding-block: .3rem; font-weight: 720; }
+@media (max-width: 760px) {
+  .governance-page .committee-roster, .governance-page .about-contact { grid-template-columns: 1fr; }
+  .governance-page .governance-body { padding-block: 1.8rem; }
+  .governance-page .about-contact > article + article { padding-top: 1.5rem; border-top: 1px solid var(--line); }
+}
+@media print {
+  .governance-page .about-nav { display: none; }
+  .governance-page .governance-body h3, .governance-page .roster-label { break-after: avoid; }
+  .governance-page .committee-roster > li { break-inside: avoid; }
+}
