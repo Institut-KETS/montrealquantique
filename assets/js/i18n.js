@@ -30,6 +30,8 @@
     'Explore the Polytechnique Montréal community': 'Découvrir la communauté de Polytechnique Montréal',
     'Explore the Concordia University community': 'Découvrir la communauté de l’Université Concordia',
     'Explore the McGill University community': 'Découvrir la communauté de l’Université McGill',
+    'Concordia University': 'Université Concordia',
+    'McGill University': 'Université McGill',
     'Explore the ÉTS Montréal, University of Québec community': 'Découvrir la communauté de l’École de technologie supérieure, Université du Québec',
     'Explore the Université du Québec à Montréal community': 'Découvrir la communauté de l’Université du Québec à Montréal',
     'Explore the Institut national de la recherche scientifique community': 'Découvrir la communauté de l’Institut national de la recherche scientifique',
