@@ -252,6 +252,7 @@
     'Cards': 'Cartes',
     'List': 'Liste',
     'people': 'personnes',
+    'courses': 'cours',
     'No people match these filters': 'Aucune personne ne correspond à ces filtres',
     'Try removing one or more filters or searching with a broader term.': 'Retirez un ou plusieurs filtres ou utilisez un terme de recherche plus général.',
     'Clear all filters': 'Effacer tous les filtres',
