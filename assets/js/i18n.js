@@ -17,7 +17,7 @@
     'Language': 'Langue',
     'Montréal Quantique home': 'Accueil de Montréal Quantique',
     'Faculty-led research across Montréal': 'Recherche menée par le corps professoral à Montréal',
-    'Quantum information processing connects Montréal to the world.': 'Le traitement de l’information quantique relie Montréal au monde.',
+    'Montréal at the heart of quantum information processing.': 'Montréal au cœur du traitement de l’information quantique.',
     'Montréal Quantique connects researchers and graduate students working in quantum information processing across Montréal’s universities. This faculty-led initiative makes local expertise easier for industry to discover, helps students find courses across institutional boundaries, and supports exchange through a shared programme of talks and research visits.': 'Montréal Quantique relie les chercheuses, chercheurs et membres de la communauté étudiante des cycles supérieurs qui travaillent en traitement de l’information quantique dans les universités montréalaises. Cette initiative dirigée par le corps professoral facilite la découverte de l’expertise locale par l’industrie, aide les étudiantes et étudiants à trouver des cours au-delà des frontières institutionnelles et soutient les échanges grâce à un programme commun de conférences et de visites de recherche.',
     'Explore the community': 'Découvrir la communauté',
     'How the initiative works': 'Fonctionnement de l’initiative',

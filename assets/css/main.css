@@ -144,6 +144,7 @@ body.preview-locked #preview-site { visibility: hidden; }
 .community-feature-image { position: relative; overflow: hidden; aspect-ratio: 2.15 / 1; border-radius: .45rem; background: var(--paper-deep); }
 .community-feature-image::after { content: ""; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 0 1px rgb(255 255 255 / .24); border-radius: inherit; }
 .community-feature img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center bottom; }
+.community-photo-credit { position: absolute; right: .75rem; bottom: .65rem; z-index: 1; margin: 0; border-radius: 999px; background: rgb(16 20 20 / .72); color: #fff; padding: .28rem .58rem; font-size: .72rem; line-height: 1.2; letter-spacing: .02em; backdrop-filter: blur(8px); }
 .community-feature figcaption { position: absolute; left: 1.25rem; top: 1.25rem; max-width: 36rem; border-left: 3px solid var(--spice); border-radius: 0 .35rem .35rem 0; background: rgb(16 20 20 / .88); color: #fff; padding: 1.1rem 1.25rem; backdrop-filter: blur(12px); }
 .community-feature figcaption .eyebrow { margin: 0 0 .55rem; }
 .community-feature figcaption .eyebrow { color: #d5ddda; }
