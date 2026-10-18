@@ -314,7 +314,8 @@ body.preview-locked #preview-site { visibility: hidden; }
 .profile-header h1 { margin: .2rem 0 .8rem; font-family: var(--serif); font-size: clamp(2.9rem,6vw,5rem); line-height: .94; font-weight: 520; letter-spacing: -.05em; }
 .profile-position { margin: 0; color: #2f3835; font-size: 1.02rem; font-weight: 740; }
 .profile-role-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem; margin-top: .4rem; color: var(--muted); font-size: .82rem; }
-.profile-role-link { color: inherit; font-weight: 520; text-underline-offset: .16em; }
+.profile-role-link, .profile-role-item { color: inherit; font-weight: 520; }
+.profile-role-link { text-underline-offset: .16em; }
 .profile-role-separator { margin-inline: .08rem; }
 .profile-institutions { margin-top: .7rem; }
 .profile-supervisors { margin-top: .5rem; }
