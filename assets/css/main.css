@@ -325,6 +325,13 @@ body.preview-locked #preview-site { visibility: hidden; }
 .profile-details dl { margin: 0; }
 .profile-details dt { color: var(--muted); font-size: .66rem; font-weight: 820; letter-spacing: .09em; text-transform: uppercase; }
 .profile-details dd { margin: .18rem 0 1.05rem; }
+.profile-section-intro { margin: -.35rem 0 1.1rem; color: var(--muted); font-size: .86rem; }
+.external-role-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .7rem; }
+.external-role-card { display: flex; min-height: 7.4rem; flex-direction: column; justify-content: space-between; border: 1px solid var(--line-strong); border-top: 2px solid var(--atlas-blue); border-radius: var(--radius); background: linear-gradient(145deg,#fff 48%,var(--atlas-blue-soft) 100%); padding: 1rem; color: var(--ink); text-decoration: none; }
+.external-role-card:nth-child(even) { border-top-color: var(--spice); background: linear-gradient(145deg,#fff 48%,var(--spice-soft) 100%); }
+.external-role-card:hover { border-color: var(--ink); }
+.external-role-label { max-width: 22rem; font: 560 1.18rem/1.18 var(--serif); letter-spacing: -.015em; }
+.external-role-link { color: var(--muted); font-size: .72rem; font-weight: 760; }
 .profile-link-list { display: flex; flex-wrap: wrap; gap: .55rem; }
 .profile-link-chip { display: inline-flex; align-items: center; justify-content: space-between; gap: 1rem; min-width: 9rem; border: 1px solid var(--line-strong); border-radius: 999px; background: #fff; padding: .55rem .8rem; color: var(--ink); font-size: .78rem; font-weight: 740; text-decoration: none; }
 .profile-link-chip:hover { background: var(--paper-deep); border-color: var(--ink); }
@@ -547,7 +554,7 @@ th { font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; }
   .profile-media, .profile-portrait-frame, .profile-portrait, .profile-initials { width: 8.5rem; }
   .profile-portrait { height: 8.5rem; }
   .profile-initials { font-size: 2.75rem; }
-  .related-grid, .contribution-grid { grid-template-columns: 1fr; }
+  .related-grid, .contribution-grid, .external-role-list { grid-template-columns: 1fr; }
   .page-header { padding-block: 4.2rem 2.8rem; }
   .scaffold-grid, .prose-grid { gap: 2rem; padding-block: 3rem 5rem; }
   .role-list div { grid-template-columns: 1fr; gap: .2rem; }
