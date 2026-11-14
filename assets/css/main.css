@@ -141,8 +141,8 @@ body.preview-locked #preview-site { visibility: hidden; }
 .map-key-institute { background: #6d4db1; }
 .map-key-hub { background: #c51d3c; }
 .hero-map-footer a { flex: 0 0 auto; color: var(--ink); font-size: .78rem; font-weight: 780; text-underline-offset: .18em; }
-.map-attribution { margin: -.45rem 1.25rem .8rem; color: #66706c; font-size: .52rem; line-height: 1.35; }
-.map-attribution a { color: inherit; text-underline-offset: .13em; }
+.corridor-caption { margin: 0; padding: .85rem 1.25rem 1rem; color: #414b47; font-size: .82rem; line-height: 1.5; }
+.corridor-caption a { color: inherit; text-underline-offset: .13em; }
 
 .community-feature { padding-block: 0 clamp(5.5rem,9vw,8.5rem); }
 .community-feature figure { position: relative; margin: 0; }
