@@ -168,3 +168,28 @@ body.mq-editorial .site-footer .marks { display: flex; flex-wrap: wrap; gap: 14p
 body.mq-editorial .partner-quote { grid-template-columns: 1fr; }
 body.mq-editorial .corridor img[hidden] { display: none; }
 body.mq-editorial .topic-list { display: flex; }
+
+body.mq-editorial .site-footer :is(.footer-actions, .footer-marks) {
+    width: min(1120px, calc(100% - 48px));
+    margin-inline: auto;
+}
+body.mq-editorial .site-footer .footer-actions a {
+    justify-content: flex-start;
+    text-decoration: none;
+}
+body.mq-editorial .site-footer .footer-actions a:hover { text-decoration: underline; }
+body.mq-editorial .site-footer .marks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(116px, 1fr));
+    gap: 14px;
+    margin-block: 16px 0;
+}
+body.mq-editorial .site-footer .marks li {
+    display: grid;
+    place-items: center;
+    height: 56px;
+    background: none;
+    border: 0;
+    padding: 4px;
+}
+body.mq-editorial .site-footer .marks img { width: 100%; height: 46px; object-fit: contain; }
