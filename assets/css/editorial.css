@@ -163,13 +163,13 @@ body.mq-editorial .footer-actions a:first-child { color: #e2d5ff; }
 .marks .mark-ets img { filter: grayscale(1) invert(1) brightness(1.65); }
 
 
-body.mq-editorial .site-footer .footer-marks { padding-block: 24px; border-block: 1px solid #424242; }
+body.mq-editorial .site-footer .footer-marks { padding-block: 24px; border-top: 1px solid #424242; }
 body.mq-editorial .site-footer .marks { display: flex; flex-wrap: wrap; gap: 14px 24px; list-style: none; padding: 0; }
 body.mq-editorial .partner-quote { grid-template-columns: 1fr; }
 body.mq-editorial .corridor img[hidden] { display: none; }
 body.mq-editorial .topic-list { display: flex; }
 
-body.mq-editorial .site-footer :is(.footer-actions, .footer-marks) {
+body.mq-editorial .site-footer .footer-marks {
     width: min(1120px, calc(100% - 48px));
     margin-inline: auto;
 }
@@ -182,7 +182,7 @@ body.mq-editorial .site-footer .marks {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(116px, 1fr));
     gap: 14px;
-    margin-block: 16px 0;
+    margin: 0;
 }
 body.mq-editorial .site-footer .marks li {
     display: grid;
@@ -200,3 +200,5 @@ body.mq-editorial .site-footer .marks img { width: 100%; height: 46px; object-fi
 .partner-inquiry-form label { display: grid; gap: 4px; font-weight: 600; }
 .partner-inquiry-form :is(input, select, textarea) { width: 100%; padding: .55rem; font: inherit; }
 .partner-inquiry-form .pathway-contact { margin: 0; }
+
+body.mq-editorial .site-footer .footer-bottom { justify-content: flex-end; border-top: 0; }
