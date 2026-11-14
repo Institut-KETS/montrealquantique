@@ -193,3 +193,10 @@ body.mq-editorial .site-footer .marks li {
     padding: 4px;
 }
 body.mq-editorial .site-footer .marks img { width: 100%; height: 46px; object-fit: contain; }
+
+#partner-inquiry { scroll-margin-top: 7rem; }
+.inquiry-layout { align-items: start; }
+.partner-inquiry-form { display: grid; gap: 12px; }
+.partner-inquiry-form label { display: grid; gap: 4px; font-weight: 600; }
+.partner-inquiry-form :is(input, select, textarea) { width: 100%; padding: .55rem; font: inherit; }
+.partner-inquiry-form .pathway-contact { margin: 0; }
