@@ -4,7 +4,6 @@ body.mq-editorial{color-scheme:light;--ink:#25232c;--muted:#524f5c;--rule:#d8d5d
 
 .publications{padding-block:44px 0}.publications>p{color:var(--muted);margin:10px 0 20px}.paper-list{padding:0;list-style:none;margin:0;border-bottom:1px solid var(--rule)}.paper-list li{display:grid;grid-template-columns:108px minmax(0, 1fr);gap:20px;align-items:start;padding:15px 0;border-top:1px solid var(--rule)}.paper-date{font-size:.8rem;color:var(--muted);display:grid}.paper-title{font-size:1.05rem;font-weight:650}.arxiv{white-space:nowrap;font-size:.86rem}.footer-marks h2{font:600 1rem var(--sans);letter-spacing:0}@media(max-width:640px){.paper-list li{grid-template-columns:1fr;gap:5px}.paper-date{display:flex;gap:9px}}
 
-.intro .intro-wordmark { display: block; width: min(100%, 49rem); height: auto; }
 .browse-research { padding-block: 32px 8px; }
 .browse-research h2 a { color: inherit; text-decoration: none; }
 .browse-research h2 a:hover { text-decoration: underline; }
