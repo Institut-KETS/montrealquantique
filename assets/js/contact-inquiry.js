@@ -1,4 +1,17 @@
-const form = document.querySelector('[data-partner-inquiry]');
+const form = document.querySelector('[data-contact-inquiry]');
+
+if (form) {
+  const type = form.elements.type;
+  const options = Array.from(type.options);
+  const requestedType = new URLSearchParams(window.location.search).get('type');
+  if (options.some((option) => option.value === requestedType)) type.value = requestedType;
+  const updateLabels = () => {
+    const language = document.documentElement.lang === 'fr' ? 'fr' : 'en';
+    options.forEach((option) => { option.textContent = option.dataset[language]; });
+  };
+  updateLabels();
+  document.addEventListener('mq:languagechange', updateLabels);
+}
 
 form?.addEventListener('submit', async (event) => {
   event.preventDefault();
@@ -32,13 +45,11 @@ form?.addEventListener('submit', async (event) => {
     return;
   }
 
-  const types = french
-    ? { delegation: 'Délégation', partnership: 'Partenariat', general: 'Demande générale' }
-    : { delegation: 'Delegation', partnership: 'Partnership', general: 'General inquiry' };
   const labels = french
-    ? { name: 'Nom', email: 'Courriel', organization: 'Organisation', timing: 'Dates ou période', details: 'Objectifs et détails' }
-    : { name: 'Name', email: 'Email', organization: 'Organization', timing: 'Dates or timeframe', details: 'Goals and details' };
-  const subject = `Montréal Quantique — ${types[data.get('type')]}`;
+    ? { name: 'Nom', email: 'Courriel', organization: 'Organisation', details: 'Message' }
+    : { name: 'Name', email: 'Email', organization: 'Organization', details: 'Message' };
+  const option = form.elements.type.selectedOptions[0];
+  const subject = `Montréal Quantique — ${option.dataset[french ? 'fr' : 'en']}`;
   const body = Object.entries(labels)
     .map(([field, label]) => `${label}: ${String(data.get(field) || '').trim()}`)
     .join('\r\n');

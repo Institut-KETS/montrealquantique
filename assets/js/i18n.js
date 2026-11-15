@@ -411,6 +411,7 @@
   }
 
   function translateTextNode(node, language) {
+    if (node.parentElement?.closest('[data-i18n-ignore]')) return;
     if (!originalText.has(node)) originalText.set(node, node.nodeValue);
     const original = originalText.get(node);
     const trimmed = original.trim();
