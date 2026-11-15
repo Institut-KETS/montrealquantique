@@ -720,7 +720,11 @@ th { font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; }
 .spokesperson-message figure { margin: 0; }
 .spokesperson-message img { width: 100%; height: auto; border-radius: .45rem; }
 .spokesperson-message .spokesperson-layout p:first-child { margin-top: 0; }
+.spokesperson-message .handwritten-signature { width: min(190px, 100%); margin-bottom: .4rem; border-radius: 0; }
+.spokesperson-message .spokesperson-signature { margin-bottom: 0; }
 .spokesperson-attribution { font-weight: 700; }
+.spokesperson-draft { max-width: 70ch; margin-top: 1.5rem; }
+.spokesperson-draft summary { font-weight: 700; cursor: pointer; }
 .advisory-seats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
