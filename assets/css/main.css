@@ -469,7 +469,7 @@ th { font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; }
 .student-card { --committee-wash: linear-gradient(145deg,#fff 58%,#f4f2e9); }
 .purpose-section { padding-block: 4rem; border-bottom: 0; }
 .goal-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .85rem; margin: 1.5rem 0 0; padding: 0; counter-reset: governance-goal; list-style: none; }
-.goal-list li { position: relative; min-height: 9rem; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; padding: 1.4rem 1.4rem 1.4rem 4rem; color: var(--muted); counter-increment: governance-goal; }
+.goal-list li { position: relative; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; padding: 1.4rem 1.4rem 1.4rem 4rem; color: var(--muted); counter-increment: governance-goal; }
 .goal-list li::before { content: counter(governance-goal,decimal-leading-zero); position: absolute; top: 1.4rem; left: 1.3rem; color: var(--atlas-blue); font: 620 1.1rem/1 var(--serif); }
 .goal-list strong { display: block; margin-bottom: .35rem; color: var(--ink); }
 .committee-kicker { margin: 0; color: #53605b; font-size: .68rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
@@ -686,6 +686,13 @@ th { font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; }
 @media (max-width: 640px) { .landing-image { grid-template-columns: 1fr; gap: 1rem; } .landing-image figcaption > p:last-child { max-width: none; } }
 
 /* About: sequential governance bodies, compact goals, and numbered rosters. */
+.governance-page .page-shell { width: min(1120px, calc(100% - 64px)); }
+.governance-page {
+  --about-number-color: var(--ink);
+  --about-number-font: var(--sans);
+  --about-number-size: .9rem;
+  --about-number-weight: 700;
+}
 .governance-page .about-header { padding-bottom: 2rem; }
 .governance-page .about-header::before, .governance-page .about-header::after { display: none; }
 .governance-page .about-header > p { max-width: 52rem; }
@@ -696,10 +703,26 @@ th { font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; }
 .governance-page .purpose-section { padding-block: 2.8rem 3rem; border-bottom: 0; }
 .governance-page .section-intro { margin-bottom: 1.5rem; }
 .governance-page .purpose-section h2, .governance-page .governance-overview h2, .governance-page .participation-section h2 { margin: 0 0 1rem; font: 560 clamp(2rem, 3.5vw, 2.8rem)/1.12 var(--serif); letter-spacing: -.03em; }
-.governance-page .goal-list { gap: 0 2.5rem; margin-top: 0; }
-.governance-page .goal-list li { min-height: 0; border: 0; border-top: 1px solid var(--line); border-radius: 0; padding: 1rem 0 1.1rem 2.3rem; font-size: .94rem; }
-.governance-page .goal-list li::before { top: 1.15rem; left: 0; font-size: 1rem; }
-.governance-page .goal-list strong { margin-bottom: .2rem; }
+.governance-page .purpose-section .goal-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.governance-page .purpose-section .goal-list li {
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  background: #fff;
+  padding: 1.25rem;
+  font-size: .94rem;
+}
+.governance-page .purpose-section .goal-list li::before { position: static; display: block; margin-bottom: .35rem; color: var(--about-number-color); font-family: var(--about-number-font); font-size: var(--about-number-size); font-weight: var(--about-number-weight); }
+.governance-page .purpose-section .goal-list strong { margin-bottom: .4rem; }
+@media (max-width: 900px) {
+  .governance-page .purpose-section .goal-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .governance-page .purpose-section .goal-list { grid-template-columns: 1fr; gap: .75rem; }
+}
 .governance-page .governance-community-photo { margin-bottom: 3rem; }
 .governance-page .governance-overview { display: block; padding-block: 2.8rem 2rem; border-top: 0; border-bottom: 0; }
 .governance-page .governance-overview > p, .governance-page .governance-body > p, .governance-page .participation-section > p { max-width: 54rem; }
@@ -711,8 +734,10 @@ th { font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; }
 .governance-page .governance-body .roster-label { margin: 1.5rem 0 .6rem; color: var(--ink); font-size: .75rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
 .governance-page .committee-roster { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 3rem; margin: 0 0 1.2rem; padding-inline-start: 1.5rem; }
 .governance-page .committee-roster > li { min-width: 0; padding: .7rem .3rem .7rem .25rem; border-bottom: 1px solid var(--line); overflow-wrap: break-word; }
-.governance-page .committee-roster > li::marker { color: var(--atlas-blue); font-weight: 720; }
-.governance-page .roster-name { display: block; font-weight: 750; }
+.governance-page .committee-roster > li::marker { color: var(--about-number-color); font-family: var(--about-number-font); font-size: var(--about-number-size); font-weight: var(--about-number-weight); }
+.governance-page #speakers-visitors .committee-roster > li::marker { color: var(--ink); font: inherit; font-weight: 750; }
+.governance-page :is(#quantum-education, #student-committee, #webpage-committee) .committee-roster > li::marker { color: var(--ink); font: inherit; font-weight: 750; }
+.governance-page :is(.roster-name, .roster-seat) { display: block; font-weight: 750; }
 .governance-page .roster-details { display: block; color: var(--muted); font-size: .9em; }
 .governance-page .participation-section { border-top: 0; padding-block: 3rem 4rem; }
 .governance-page .participation-section > h3 { margin-top: 2rem; }
@@ -720,6 +745,9 @@ th { font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; }
 .governance-page .about-contact > article { min-width: 0; }
 .governance-page .participation-links { display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; margin: 1rem 0 0; padding: 0; list-style: none; }
 .governance-page .participation-links a { display: inline-block; padding-block: .3rem; font-weight: 720; }
+@media (max-width: 500px) {
+  .governance-page .page-shell { width: calc(100% - 32px); }
+}
 @media (max-width: 760px) {
   .governance-page .committee-roster, .governance-page .about-contact { grid-template-columns: 1fr; }
   .governance-page .governance-body { padding-block: 1.8rem; }
@@ -745,19 +773,22 @@ th { font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; }
 .spokesperson-message { padding-block: 2.6rem; border-top: 0; }
 .spokesperson-message h2 { font: 560 clamp(1.75rem, 3.4vw, 2.6rem)/1.15 var(--serif); margin: 0 0 .9rem; }
 .spokesperson-message .spokesperson-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 14rem) minmax(0, 64ch);
-  align-items: start;
-  gap: 1.6rem;
+  display: flow-root;
   margin-top: 1.35rem;
 }
-.spokesperson-message figure { margin: 0; }
+.spokesperson-message figure { float: left; width: 14rem; max-width: 42%; margin: 0 1.6rem 1rem 0; }
 .spokesperson-message img { width: 100%; height: auto; }
-.spokesperson-message .spokesperson-layout p:first-child { margin-top: 0; }
+.spokesperson-message .spokesperson-layout > div > p:not(.spokesperson-signature) { margin: 0 0 1.1rem; line-height: 1.7; }
+.spokesperson-message .spokesperson-layout > div > p:first-child { margin-top: 0; }
+@media (min-width: 641px) {
+  .spokesperson-message .spokesperson-layout > div > p:first-child > span:not([hidden]) { position: relative; top: -.25rem; }
+}
 .spokesperson-message .handwritten-signature { width: min(190px, 100%); margin-bottom: .4rem; border-radius: 0; }
-.spokesperson-message .spokesperson-signature { margin-bottom: 0; }
+.spokesperson-message .spokesperson-signature { clear: both; margin: 1.4rem 0 0; }
 .spokesperson-attribution { font-weight: 700; }
 .spokesperson-draft { max-width: 70ch; margin-top: 1.5rem; }
+.governance-page .spokesperson-draft,
+.governance-page .spokesperson-draft .review-todo { max-width: none; }
 .spokesperson-draft summary { font-weight: 700; cursor: pointer; }
 .advisory-seats {
   display: grid;
@@ -777,8 +808,8 @@ th { font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; }
 .governance-procedures details { max-width: 68ch; }
 .governance-procedures summary { cursor: pointer; font-weight: 700; }
 @media (max-width: 640px) {
-  .advisory-seats, .spokesperson-message .spokesperson-layout { grid-template-columns: 1fr; }
-  .spokesperson-message figure { max-width: 13rem; }
+  .advisory-seats { grid-template-columns: 1fr; }
+  .spokesperson-message figure { float: none; width: min(13rem, 100%); max-width: none; margin: 0 0 1rem; }
 }
 
 .advisory-appointments {
