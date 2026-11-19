@@ -292,6 +292,7 @@
     'No public events or visits yet': 'Aucun événement ni visite publique pour le moment',
     'Public records will appear only after dates, hosts, visitor details, and publication approval are verified.': 'Les fiches publiques paraîtront seulement après vérification des dates, des établissements d’accueil, des renseignements sur les personnes invitées et de l’autorisation de publication.',
     'Research': 'Recherche',
+    'The promise of quantum information processing': 'Les promesses du traitement de l’information quantique',
     'Topics': 'Sujets',
     'Research profile': 'Profil de recherche',
     'Research overview': 'Aperçu de la recherche',
