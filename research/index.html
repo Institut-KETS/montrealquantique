@@ -6,7 +6,7 @@
 
 
 
-<meta name="description" content="Explore the promise of quantum information processing, from secure communication and quantum simulation to new approaches to machine learning.">
+<meta name="description" content="Explore quantum information processing through BB84, quantum machine learning, quantum complex networks, chiral quantum walks, tensor networks and Lean verification.">
 <meta name="robots" content="noindex,nofollow,noarchive">
 
 <link rel="canonical" href="https://montrealquantique.ca/research/">
@@ -14,7 +14,7 @@
 
 <meta property="og:site_name" content="Montréal Quantique">
 <meta property="og:title" content="Research">
-<meta property="og:description" content="Explore the promise of quantum information processing, from secure communication and quantum simulation to new approaches to machine learning.">
+<meta property="og:description" content="Explore quantum information processing through BB84, quantum machine learning, quantum complex networks, chiral quantum walks, tensor networks and Lean verification.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://montrealquantique.ca/research/">
 
@@ -26,10 +26,10 @@
 <meta property="og:locale" content="en_CA">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Research">
-<meta name="twitter:description" content="Explore the promise of quantum information processing, from secure communication and quantum simulation to new approaches to machine learning.">
+<meta name="twitter:description" content="Explore quantum information processing through BB84, quantum machine learning, quantum complex networks, chiral quantum walks, tensor networks and Lean verification.">
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/assets/css/main.css?v=1795019466">
-<link rel="stylesheet" href="/assets/css/editorial.css?v=1795019466">
+<link rel="stylesheet" href="/assets/css/main.css?v=1795105407">
+<link rel="stylesheet" href="/assets/css/editorial.css?v=1795105407">
 <title>Research · Montréal Quantique</title>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"Montréal Quantique","url":"https://montrealquantique.ca/","description":"Montréal Quantique connects researchers and graduate students in quantum information processing across Montréal through shared expertise, courses, talks and research visits.","inLanguage":["en-CA","fr-CA"]}
@@ -74,21 +74,13 @@
   </div>
 </header>
 <script src="/assets/js/navigation.js" defer></script>
-<script src="/assets/js/i18n.js?v=1795019466" defer></script>
+<script src="/assets/js/i18n.js?v=1795105407" defer></script>
 
       <main id="main-content" tabindex="-1">
         <header class="wrap intro research-intro" id="promise">
   <h1><span data-theme-en>Research</span><span data-theme-fr hidden>Recherche</span></h1>
-  <p><span data-theme-en>Quantum information processing asks what we can learn, compute and communicate by preparing, controlling and measuring quantum systems. It opens up new ways to secure communications and could help us design materials by simulating how molecules behave. It also raises a practical question: which problems can quantum methods solve better than the best classical ones?</span><span data-theme-fr hidden>Le traitement de l’information quantique étudie ce que l’on peut apprendre, calculer et communiquer en préparant, en contrôlant et en mesurant des systèmes quantiques. Il ouvre de nouvelles voies pour sécuriser les communications et pourrait aider à concevoir des matériaux en simulant le comportement des molécules. Il soulève aussi une question pratique : pour quels problèmes les méthodes quantiques peuvent-elles faire mieux que les meilleures méthodes classiques?</span></p>
-  <div class="research-commercial">
-    <p><span data-theme-en>Some products are already on the market. Companies sell access to quantum processors through the cloud and equipment that distributes keys over optical fibre. For quantum computing, the commercial test is whether a full application can outperform the best classical methods once the costs of running the calculation and correcting errors are included.</span><span data-theme-fr hidden>Certains produits sont déjà sur le marché. Des entreprises vendent l’accès à des processeurs quantiques dans le nuage ainsi que des équipements de distribution de clés sur fibre optique. Pour le calcul quantique, l’enjeu commercial est de surpasser les meilleures méthodes classiques sur une application complète, compte tenu du coût du calcul et de la correction d’erreurs.</span></p>
-    <p class="research-sources">
-      <a href="https://quantum.cloud.ibm.com/docs/en/ibm-quantum-platform/plans-overview" target="_blank" rel="noopener"><span data-theme-en>Cloud access</span><span data-theme-fr hidden>Accès infonuagique</span> <span aria-hidden="true">↗</span></a>
-      <a href="https://www.toshiba.eu/quantum/products/quantum-key-distribution/" target="_blank" rel="noopener"><span data-theme-en>Key distribution equipment</span><span data-theme-fr hidden>Équipements de distribution de clés</span> <span aria-hidden="true">↗</span></a>
-    </p>
-  </div>
+  <p><span data-theme-en>Quantum information processing uses quantum states, transformations and measurements to represent and process information. Its tools bring together physics, mathematics and computer science to develop algorithms, model complex systems and verify how quantum protocols work.</span><span data-theme-fr hidden>Le traitement de l’information quantique utilise des états, des transformations et des mesures quantiques pour représenter et traiter l’information. Ses outils réunissent la physique, les mathématiques et l’informatique pour développer des algorithmes, modéliser des systèmes complexes et vérifier le fonctionnement des protocoles quantiques.</span></p>
   <nav class="editorial-jump" aria-label="On this page / Sur cette page">
-    <a href="#communications"><span data-theme-en>Communication</span><span data-theme-fr hidden>Communications</span></a>
     <a href="#milestones"><span data-theme-en>Research fields</span><span data-theme-fr hidden>Domaines de recherche</span></a>
     <a href="#recent-papers"><span data-theme-en>Recent papers</span><span data-theme-fr hidden>Articles récents</span></a>
     <a href="#topics"><span data-theme-en>Find researchers</span><span data-theme-fr hidden>Trouver des équipes</span></a>
@@ -96,15 +88,20 @@
 </header>
 
 <div class="wrap editorial-content">
-  <section class="editorial-section research-story" id="communications" aria-labelledby="communications-heading">
-    <h2 id="communications-heading"><span data-theme-en>Quantum communication</span><span data-theme-fr hidden>Communications quantiques</span></h2>
-    <p><span data-theme-en>BB84 shows how quantum physics can change the way we secure communications. One party sends quantum states and the other measures them. They compare a sample of their results to estimate errors and decide whether they can extract a secure key from the rest. Related work asks how to use shared entanglement to transfer quantum states and connect distant devices.</span><span data-theme-fr hidden>Le protocole BB84 montre comment la physique quantique peut changer la façon de sécuriser les communications. Une partie envoie des états quantiques et l’autre les mesure. Elles comparent un échantillon de leurs résultats pour estimer le taux d’erreur et déterminer si elles peuvent extraire une clé sûre à partir des résultats restants. Des travaux connexes étudient comment utiliser l’intrication partagée pour transférer des états quantiques et relier des appareils à distance.</span></p>
-  </section>
-
   <section class="editorial-section research-story" id="milestones" aria-labelledby="milestones-heading">
     <h2 id="milestones-heading"><span data-theme-en>Research fields</span><span data-theme-fr hidden>Domaines de recherche</span></h2>
-    <p><span data-theme-en>In quantum complex networks, the pattern of connections can shape how a system behaves as a whole. Chiral quantum walks give a concrete example: breaking certain symmetries can make transport along a network favour one direction. These models help us understand how energy and information move through quantum systems.</span><span data-theme-fr hidden>Dans les réseaux quantiques complexes, la structure des connexions peut façonner le comportement de l’ensemble du système. Les marches quantiques chirales en donnent un exemple concret : la brisure de certaines symétries peut favoriser le transport dans une direction au sein d’un réseau. Ces modèles aident à comprendre comment l’énergie et l’information circulent dans les systèmes quantiques.</span></p>
-    <p><span data-theme-en>Structure also matters when we try to simulate a quantum system. Tensor networks represent large quantum states using smaller connected pieces, making some systems easier to study on classical computers. Quantum machine learning looks at the relationship from both sides: when quantum algorithms might help with learning tasks, and how machine learning can help us make sense of quantum data.</span><span data-theme-fr hidden>La structure compte aussi lorsqu’on cherche à simuler un système quantique. Les réseaux de tenseurs représentent de grands états quantiques à l’aide de composantes plus petites reliées entre elles, ce qui facilite l’étude de certains systèmes sur des ordinateurs classiques. L’apprentissage automatique quantique explore cette relation dans les deux sens : dans quels cas des algorithmes quantiques pourraient faciliter l’apprentissage, et comment l’apprentissage automatique peut aider à interpréter des données quantiques.</span></p>
+    <h3>BB84</h3>
+    <p><span data-theme-en>The BB84 protocol, introduced by Charles Bennett and Gilles Brassard, uses quantum states prepared and measured in different bases to establish a shared secret key. With an authenticated classical channel, the parties estimate errors, reconcile their results and apply privacy amplification to obtain a key under stated security assumptions.</span><span data-theme-fr hidden>Le protocole BB84, proposé par Charles Bennett et Gilles Brassard, utilise des états quantiques préparés et mesurés dans différentes bases pour établir une clé secrète commune. À l’aide d’un canal classique authentifié, les parties estiment les erreurs, réconcilient leurs résultats et appliquent l’amplification de confidentialité pour obtenir une clé selon des hypothèses de sécurité explicites.</span></p>
+    <h3><span data-theme-en>Quantum machine learning</span><span data-theme-fr hidden>Apprentissage automatique quantique</span></h3>
+    <p><span data-theme-en>Quantum machine learning studies how quantum algorithms and models can support tasks such as classification, prediction and learning from quantum data. It also uses machine learning to characterize and control quantum systems. Research examines which data, models and computational resources could yield an advantage.</span><span data-theme-fr hidden>L’apprentissage automatique quantique étudie comment les algorithmes et modèles quantiques peuvent contribuer à la classification, à la prédiction et à l’apprentissage à partir de données quantiques. Il utilise aussi l’apprentissage automatique pour caractériser et contrôler les systèmes quantiques. La recherche examine quelles données, quels modèles et quelles ressources de calcul pourraient procurer un avantage.</span></p>
+    <h3><span data-theme-en>Quantum complex networks</span><span data-theme-fr hidden>Réseaux quantiques complexes</span></h3>
+    <p><span data-theme-en>Quantum complex networks describe interacting quantum systems through nodes and connections. Their structure shapes how quantum states, correlations and excitations evolve. Studying these networks helps explain how connectivity and disorder affect collective behaviour and the transport of energy and information.</span><span data-theme-fr hidden>Les réseaux quantiques complexes décrivent des systèmes quantiques en interaction à l’aide de nœuds et de liens. Leur structure façonne l’évolution des états, des corrélations et des excitations quantiques. Leur étude aide à comprendre comment la connectivité et le désordre influencent le comportement collectif et le transport de l’énergie et de l’information.</span></p>
+    <h3><span data-theme-en>Chiral quantum walks</span><span data-theme-fr hidden>Marches quantiques chirales</span></h3>
+    <p><span data-theme-en>A quantum walk models the motion of an excitation across a graph. Chiral quantum walks introduce phases into the couplings that can break time-reversal symmetry and favour transport in a chosen direction. They provide a way to study and control quantum transport through the interplay of network geometry and interference.</span><span data-theme-fr hidden>Une marche quantique modélise le déplacement d’une excitation sur un graphe. Les marches quantiques chirales introduisent dans les couplages des phases qui peuvent briser la symétrie par renversement du temps et favoriser le transport dans une direction choisie. Elles permettent d’étudier et de contrôler le transport quantique par l’interaction entre la géométrie du réseau et les interférences.</span></p>
+    <h3><span data-theme-en>Tensor networks</span><span data-theme-fr hidden>Réseaux de tenseurs</span></h3>
+    <p><span data-theme-en>Tensor networks express quantum states and operations as collections of smaller tensors connected by shared indices. By exploiting the structure of entanglement, they make many quantum systems more manageable to simulate on classical computers. They also support the analysis of quantum circuits, many-body physics and learning models.</span><span data-theme-fr hidden>Les réseaux de tenseurs représentent les états et les opérations quantiques par des ensembles de tenseurs plus petits reliés par des indices communs. En exploitant la structure de l’intrication, ils facilitent la simulation de nombreux systèmes quantiques sur des ordinateurs classiques. Ils servent aussi à analyser les circuits quantiques, la physique à plusieurs corps et les modèles d’apprentissage.</span></p>
+    <h3><span data-theme-en>Lean verification of quantum information processing</span><span data-theme-fr hidden>Vérification du traitement de l’information quantique avec Lean</span></h3>
+    <p><span data-theme-en>Lean is a proof assistant for writing mathematical definitions, theorem statements and proofs that a computer can check. Applied to quantum information processing, it can formalize quantum states, operations and protocols, and verify mathematical claims about their behaviour. Each proof makes its definitions and assumptions explicit and is checked by Lean’s kernel.</span><span data-theme-fr hidden>Lean est un assistant de preuve qui permet de rédiger des définitions mathématiques, des énoncés de théorèmes et des preuves vérifiables par ordinateur. Appliqué au traitement de l’information quantique, il peut formaliser des états, des opérations et des protocoles quantiques, puis vérifier des affirmations mathématiques sur leur comportement. Chaque preuve explicite ses définitions et ses hypothèses et est vérifiée par le noyau de Lean.</span></p>
   </section>
 
   <section class="editorial-section" id="recent-papers" aria-labelledby="recent-papers-heading">
