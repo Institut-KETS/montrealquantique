@@ -3,6 +3,14 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  try {
+    const savedColorTheme = localStorage.getItem('mq-color-theme');
+    if (savedColorTheme === 'dark' || savedColorTheme === 'light') {
+      document.documentElement.dataset.colorTheme = savedColorTheme;
+    }
+  } catch (_) {}
+</script>
 
 
 
@@ -38,7 +46,7 @@
 <meta name="twitter:title" content="Governance">
 <meta name="twitter:description" content="Montréal Quantique governance is now part of the About page.">
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/assets/css/main.css?v=1795107607">
+<link rel="stylesheet" href="/assets/css/main.css?v=1795210188">
 
 <title>Governance · Montréal Quantique</title>
 <script type="application/ld+json">
@@ -76,6 +84,7 @@
         <a href="/"><span data-theme-en>Home</span><span data-theme-fr hidden>Accueil</span></a><a href="/about/"><span data-theme-en>About</span><span data-theme-fr hidden>À propos</span></a><a href="/members/"><span data-theme-en>Community</span><span data-theme-fr hidden>Communauté</span></a><a href="/research/"><span data-theme-en>Research</span><span data-theme-fr hidden>Recherche</span></a><a href="/courses/"><span data-theme-en>Courses</span><span data-theme-fr hidden>Cours</span></a><a href="/speaker-series/"><span data-theme-en>Speakers &amp; Visitors</span><span data-theme-fr hidden>Conférences et visites</span></a><a href="/news/"><span data-theme-en>News</span><span data-theme-fr hidden>Actualités</span></a><a href="/contact/"><span data-theme-en>Contact</span><span data-theme-fr hidden>Contact</span></a>
       </nav>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme"><span aria-hidden="true" data-theme-icon>◐</span></button>
       <div class="language-switch" role="group" aria-label="Language">
         <button type="button" data-language="fr" aria-pressed="false">FR</button>
         <button type="button" data-language="en" aria-pressed="true">EN</button>
@@ -84,7 +93,8 @@
   </div>
 </header>
 <script src="/assets/js/navigation.js" defer></script>
-<script src="/assets/js/i18n.js?v=1795107607" defer></script>
+<script src="/assets/js/i18n.js?v=1795210188" defer></script>
+<script src="/assets/js/theme.js?v=1795210188" defer></script>
 
       <main id="main-content" tabindex="-1">
         <div class="page-shell">

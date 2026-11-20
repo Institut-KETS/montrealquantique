@@ -3,6 +3,14 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  try {
+    const savedColorTheme = localStorage.getItem('mq-color-theme');
+    if (savedColorTheme === 'dark' || savedColorTheme === 'light') {
+      document.documentElement.dataset.colorTheme = savedColorTheme;
+    }
+  } catch (_) {}
+</script>
 
 
 
@@ -28,7 +36,7 @@
 <meta name="twitter:title" content="About">
 <meta name="twitter:description" content="About Montréal Quantique, a faculty-led initiative improving visibility, coordination and collaboration in quantum applications across Montréal.">
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/assets/css/main.css?v=1795107607">
+<link rel="stylesheet" href="/assets/css/main.css?v=1795210188">
 
 <title>About · Montréal Quantique</title>
 <script type="application/ld+json">
@@ -66,6 +74,7 @@
         <a href="/"><span data-theme-en>Home</span><span data-theme-fr hidden>Accueil</span></a><a href="/about/" aria-current="page"><span data-theme-en>About</span><span data-theme-fr hidden>À propos</span></a><a href="/members/"><span data-theme-en>Community</span><span data-theme-fr hidden>Communauté</span></a><a href="/research/"><span data-theme-en>Research</span><span data-theme-fr hidden>Recherche</span></a><a href="/courses/"><span data-theme-en>Courses</span><span data-theme-fr hidden>Cours</span></a><a href="/speaker-series/"><span data-theme-en>Speakers &amp; Visitors</span><span data-theme-fr hidden>Conférences et visites</span></a><a href="/news/"><span data-theme-en>News</span><span data-theme-fr hidden>Actualités</span></a><a href="/contact/"><span data-theme-en>Contact</span><span data-theme-fr hidden>Contact</span></a>
       </nav>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme"><span aria-hidden="true" data-theme-icon>◐</span></button>
       <div class="language-switch" role="group" aria-label="Language">
         <button type="button" data-language="fr" aria-pressed="false">FR</button>
         <button type="button" data-language="en" aria-pressed="true">EN</button>
@@ -74,14 +83,17 @@
   </div>
 </header>
 <script src="/assets/js/navigation.js" defer></script>
-<script src="/assets/js/i18n.js?v=1795107607" defer></script>
+<script src="/assets/js/i18n.js?v=1795210188" defer></script>
+<script src="/assets/js/theme.js?v=1795210188" defer></script>
 
       <main id="main-content" tabindex="-1">
-        <header class="page-header page-shell about-header">
-  <p class="eyebrow"><span data-theme-en>A faculty-led initiative</span><span data-theme-fr hidden>Une initiative portée par le corps professoral</span></p>
-  <h1><span data-theme-en>About Montréal Quantique</span><span data-theme-fr hidden>À propos de Montréal Quantique</span></h1>
-  <p><span data-theme-en>Montréal Quantique is a faculty-led initiative connecting Montréal’s quantum information processing community. Originally established to improve visibility and coordination in quantum applications, it supports research collaboration, education and exchanges across institutions.</span><span data-theme-fr hidden>Montréal Quantique est une initiative portée par le corps professoral qui relie la communauté montréalaise du traitement de l’information quantique. Créée à l’origine pour améliorer la visibilité et la coordination en applications quantiques, elle soutient la collaboration en recherche, la formation et les échanges entre établissements.</span></p>
-  <p class="about-acknowledgement"><span data-theme-en>We acknowledge the early support of the ÉTS Institute for Quantum Science and Engineering project in establishing the website and shared activities.</span><span data-theme-fr hidden>Nous soulignons le soutien initial du projet de l’Institut en sciences et génie quantiques de l’ÉTS à la mise en place du site Web et des activités communes.</span></p>
+        <header class="page-header about-header quantum-wave-intro">
+  <div class="page-shell">
+    <p class="eyebrow"><span data-theme-en>A faculty-led initiative</span><span data-theme-fr hidden>Une initiative portée par le corps professoral</span></p>
+    <h1><span data-theme-en>About Montréal Quantique</span><span data-theme-fr hidden>À propos de Montréal Quantique</span></h1>
+    <p><span data-theme-en>Montréal Quantique is a faculty-led initiative connecting Montréal’s quantum information processing community. Originally established to improve visibility and coordination in quantum applications, it supports research collaboration, education and exchanges across institutions.</span><span data-theme-fr hidden>Montréal Quantique est une initiative portée par le corps professoral qui relie la communauté montréalaise du traitement de l’information quantique. Créée à l’origine pour améliorer la visibilité et la coordination en applications quantiques, elle soutient la collaboration en recherche, la formation et les échanges entre établissements.</span></p>
+    <p class="about-acknowledgement"><span data-theme-en>We acknowledge the early support of the ÉTS Institute for Quantum Science and Engineering project in establishing the website and shared activities.</span><span data-theme-fr hidden>Nous soulignons le soutien initial du projet de l’Institut en sciences et génie quantiques de l’ÉTS à la mise en place du site Web et des activités communes.</span></p>
+  </div>
 </header>
 
 <nav class="page-shell about-nav" aria-labelledby="about-nav-heading">
@@ -149,8 +161,8 @@
   <p><span data-theme-en>Universities, research institutes and industry would jointly guide the initiative’s strategy, review shared activities and identify opportunities for collaboration. Each participating organization would designate one representative.</span><span data-theme-fr hidden>Les universités, les instituts de recherche et l’industrie orienteraient ensemble la stratégie de l’initiative, examineraient ses activités communes et cerneraient les possibilités de collaboration. Chaque organisation participante désignerait une personne pour la représenter.</span></p>
   <p class="roster-label"><span data-theme-en>Proposed composition</span><span data-theme-fr hidden>Composition proposée</span></p>
   <dl class="advisory-appointments">
-    <div><dt><span data-theme-en>Chair</span><span data-theme-fr hidden>Président</span></dt><dd>Jean Belzile · ÉTS</dd></div>
-    <div><dt><span data-theme-en>Member</span><span data-theme-fr hidden>Membre</span></dt><dd>Jacob Biamonte</dd></div>
+    <div><dt class="roster-name">Jean Belzile · ÉTS</dt><dd class="roster-details"><span data-theme-en>Chair</span><span data-theme-fr hidden>Président</span></dd></div>
+    <div><dt class="roster-name">Jacob Biamonte</dt><dd class="roster-details"><span data-theme-en>Member</span><span data-theme-fr hidden>Membre</span></dd></div>
   </dl>
   <div class="advisory-seats">
     <div>
@@ -185,7 +197,7 @@
       </ul>
     </div>
   </div>
-  <p class="advisory-convener"><strong><span data-theme-en>Convener</span><span data-theme-fr hidden>Responsable de la convocation</span></strong> · Melissa Turp-Yonezawa, ÉTS</p>
+  <p class="advisory-convener"><strong class="roster-name">Melissa Turp-Yonezawa, ÉTS</strong><span class="roster-details"><span data-theme-en>Convener</span><span data-theme-fr hidden>Responsable de la convocation</span></span></p>
   <p><span data-theme-en>The governance proposal also provides for an elected student representative and a non-voting observer from Québec’s Ministry of Economy, Innovation and Energy.</span><span data-theme-fr hidden>La proposition de gouvernance prévoit aussi une personne représentante étudiante élue et une personne observatrice, sans droit de vote, du ministère de l’Économie, de l’Innovation et de l’Énergie du Québec.</span></p>
   <p class="review-todo"><span data-theme-en><strong>TODO:</strong> Confirm participating organizations, how affiliated institutes will be represented, and voting rules for the combined committee.</span><span data-theme-fr hidden><strong>À faire :</strong> Confirmer les organisations participantes, le mode de représentation des instituts affiliés et les règles de vote du comité mixte.</span></p>
 </section>
@@ -277,11 +289,11 @@
   <h2 id="participation-heading"><span data-theme-en>Participation and contact</span><span data-theme-fr hidden>Participation et contact</span></h2>
   <p><span data-theme-en>For collective support, visiting delegations and media inquiries, contact Melissa Turp-Yonezawa at ÉTS. For research or supervision, start with a principal investigator in the Community directory.</span><span data-theme-fr hidden>Pour soutenir l’initiative dans son ensemble, organiser la visite d’une délégation ou joindre l’équipe au nom d’un média, communiquez avec Melissa Turp-Yonezawa à l’ÉTS. Pour la recherche ou la direction d’études, adressez-vous à une chercheuse principale ou à un chercheur principal du répertoire.</span></p>
   <ul class="participation-links">
-    <li><a href="/contact/#inquiry"><span data-theme-en>Contact Melissa</span><span data-theme-fr hidden>Contacter Melissa</span></a></li>
-    <li><a href="/members/"><span data-theme-en>Community</span><span data-theme-fr hidden>Communauté</span></a></li>
-    <li><a href="/courses/"><span data-theme-en>Courses</span><span data-theme-fr hidden>Cours</span></a></li>
-    <li><a href="/speaker-series/"><span data-theme-en>Speakers &amp; Visitors</span><span data-theme-fr hidden>Conférences et visites</span></a></li>
-    <li><a href="/support/"><span data-theme-en>Support Montréal Quantique</span><span data-theme-fr hidden>Soutenir Montréal Quantique</span></a></li>
+    <li><a href="/contact/#inquiry"><span data-theme-en>Contact Melissa</span><span data-theme-fr hidden>Contacter Melissa</span> <span aria-hidden="true">→</span></a></li>
+    <li><a href="/members/"><span data-theme-en>Community</span><span data-theme-fr hidden>Communauté</span> <span aria-hidden="true">→</span></a></li>
+    <li><a href="/courses/"><span data-theme-en>Courses</span><span data-theme-fr hidden>Cours</span> <span aria-hidden="true">→</span></a></li>
+    <li><a href="/speaker-series/"><span data-theme-en>Speakers &amp; Visitors</span><span data-theme-fr hidden>Conférences et visites</span> <span aria-hidden="true">→</span></a></li>
+    <li><a href="/support/"><span data-theme-en>Support Montréal Quantique</span><span data-theme-fr hidden>Soutenir Montréal Quantique</span> <span aria-hidden="true">→</span></a></li>
   </ul>
 </section>
 
@@ -342,7 +354,7 @@
 
     </div>
     <script src="/assets/js/portraits.js" defer></script>
-
+<script type="module" src="/assets/js/about-nav.js"></script>
     <script src="/assets/js/preview-gate.js"></script>
   </body>
 </html>

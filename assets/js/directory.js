@@ -59,16 +59,32 @@ function controlLabel(facet, value) {
 
 function renderChips(state) {
   const container = document.querySelector('[data-active-filters]');
+  const section = document.querySelector('[data-active-filter-section]');
+  const count = document.querySelector('[data-active-filter-count]');
   if (!container) return;
   container.replaceChildren();
   const entries = [];
   if (state.q) entries.push(['q', state.q, `Search: ${state.q}`]);
   [['role', state.roles], ['institution', state.institutions], ['topic', state.topics]].forEach(([facet, list]) => list.forEach((value) => entries.push([facet, value, controlLabel(facet, value)])));
+  if (count) count.textContent = String(entries.length);
+  if (section) section.hidden = entries.length === 0;
+  [['role', state.roles], ['institution', state.institutions], ['topic', state.topics]].forEach(([facet, selected]) => {
+    const badge = document.querySelector(`[data-filter-count="${facet}"]`);
+    if (!badge) return;
+    badge.textContent = String(selected.length);
+    badge.hidden = selected.length === 0;
+  });
   entries.forEach(([facet, value, label]) => {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'filter-chip';
-    button.textContent = `${label} ×`;
+    const text = document.createElement('span');
+    text.textContent = label;
+    const remove = document.createElement('span');
+    remove.className = 'filter-chip-x';
+    remove.setAttribute('aria-hidden', 'true');
+    remove.textContent = '×';
+    button.append(text, remove);
     button.setAttribute('aria-label', `Remove ${label} filter`);
     button.addEventListener('click', () => {
       if (facet === 'q') query.value = '';
@@ -121,4 +137,5 @@ if (cards.length) {
     setControls(stateFromParams(new URLSearchParams(window.location.search)));
     applyFilters({ replace: true });
   });
+  document.addEventListener('mq:languagechange', () => renderChips(stateFromControls()));
 }
