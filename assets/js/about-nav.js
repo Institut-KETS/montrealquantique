@@ -1,5 +1,5 @@
 (() => {
-  const nav = document.querySelector('.governance-page .about-nav');
+  const nav = document.querySelector('.about-nav');
   if (!nav) return;
 
   const links = Array.from(nav.querySelectorAll('a[href^="#"]'));
