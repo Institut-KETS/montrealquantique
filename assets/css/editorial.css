@@ -106,6 +106,32 @@ body.mq-editorial{color-scheme:light;--ink:var(--color-ink);--muted:var(--color-
 }
 body.mq-editorial .partner-quote { grid-template-columns: 1fr; }
 body.mq-editorial .corridor img[hidden] { display: none; }
+
+.corridor-map {
+  position: relative;
+  container-type: inline-size;
+}
+
+/* Cover the original oversized label in each version of the map. */
+.corridor-mcgill-label {
+  position: absolute;
+  inset: 59.25% auto auto 54.05%;
+  display: grid;
+  align-content: center;
+  width: 10.85%;
+  height: 7.65%;
+  padding-inline: .95cqw;
+  border: .15cqw solid #c6c9d1;
+  border-radius: .55cqw;
+  background: #fff;
+  color: #555952;
+  font: 500 1.12cqw/1.15 var(--sans);
+  white-space: nowrap;
+}
+
+.corridor-mcgill-label[data-theme-fr] { width: 11.45%; }
+.corridor-mcgill-label strong { color: #484375; font-size: 1.62cqw; }
+.corridor-mcgill-label[hidden] { display: none; }
 body.mq-editorial .topic-list { display: flex; }
 
 #partner-inquiry { scroll-margin-top: 7rem; }
